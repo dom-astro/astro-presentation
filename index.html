@@ -15,6 +15,9 @@
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 
+		<!-- JQuery -->
+		<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>		
+		
 		<!-- Vis.js for timeline -->
 		<link href="https://unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
@@ -22,17 +25,22 @@
 
 	</head>
 	<body>
+		<div id="visualization"></div>
 		<div class="reveal">
 			<div class="slides">
 				<section>
 					<img src="img/intro.png" alt="L'astronomie à travers les âges" style="width: 100%; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
 				</section>
 				<section>
+					<span>L’astronomie est l’une des plus anciennes sciences connues de l’humanité.
+						Les civilisations anciennes, telles que les Babyloniens, utilisaient l’astronomie pour suivre le temps et les saisons en observant les mouvements des planètes et des étoiles.
+						Au fil du temps, l’astronomie a évolué pour devenir une science complexe qui étudie les corps célestes et leur comportement dans l’univers.
+						L’étude de l’astronomie a permis aux scientifiques de découvrir des phénomènes tels que les trous noirs, les supernovas et les galaxies.
+						Aujourd’hui, l’astronomie continue d’être une science en constante évolution qui nous permet de mieux comprendre notre place dans l’univers.</span>
 					<!-- div data-timeline="'welcome.json"></div -->
-					<div id="visualization"></div>
 				</section>
 				<section>
-					Préhisttoire (3 cylces: journée, lune, année. La grotte de Lascaux)
+					Préhisttoire (3 cycles: journée, lune, année. La grotte de Lascaux)
 				</section>
 				<section>
 					La Mésopotamie
@@ -113,24 +121,21 @@
 			var items = new vis.DataSet([
 					  // round of 16
 					  {
-						  start: "2000-01-01T00:00:00",
+						  start: "-18000",
 						  name: "Lascaux",
 						  description: "L'astronomie dans la préhistoire",
-						  end: "2010-01-01T00:00:00",
 					  },
 					  {
-						  start: "2015-01-01T00:00:00",
+						  start: "-276",
 						  name: "Erastothène",
 						  description: "L'astronomie dans l'antiqutié",
-						  end: "2018-01-01T00:00:00",
 					  },
 					  {
-						  start: "2020-01-01T00:00:00",
+						  start: "1800",
 						  name: "Hyppolite Fizeau",
 						  description: "L'astronomie au XIXème siècle",
-						  end: "2023-01-01T00:00:00",
 					  },
-					  ]);
+				  ]);
 		  
 					  // Configuration for the Timeline
 					  var options = {
@@ -161,6 +166,15 @@
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
+
+			setInterval(() => {
+				if(location.href.includes("#")) {
+					$("#visualization").show();
+					$(".reveal").css("top","100px");
+				} else {
+					$("#visualization").hide();
+				}
+			}, 500);	
 		</script>
 	</body>
 </html>
