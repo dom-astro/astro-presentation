@@ -1,0 +1,30 @@
+body, html {
+    font-family: sans-serif;
+    font-size: 10pt;
+  }
+
+ .vis.timeline .item {
+    border-color: #acacac;
+    background-color: #efefef;
+    box-shadow: 5px 5px 10px rgba(128,128,128, 0.3);
+}
+
+table .description {
+    font-style: italic;
+}
+
+#visualization {
+    width: 100%;
+    height: 400px;
+    border: 1px solid lightgray;
+  }
+
+.logo {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.logo img {
+    width: 120px;
+}

@@ -1,17 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<title>L'Astronomie à travers les âges</title>
 
+		<link rel="stylesheet" href="css/frise.css">
+		
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/serif.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<!-- Vis.js for timeline -->
+		<link href="https://unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
 	</head>
 	<body>
 		<div class="reveal">
@@ -20,7 +28,8 @@
 					<img src="img/intro.png" alt="L'astronomie à travers les âges" style="width: 100%; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
 				</section>
 				<section>
-					<div data-timeline="'welcome.json"></div>
+					<!-- div data-timeline="'welcome.json"></div -->
+					<div id="visualization"></div>
 				</section>
 				<section>
 					Préhisttoire (3 cylces: journée, lune, année. La grotte de Lascaux)
@@ -82,6 +91,62 @@
 			</div>
 		</div>
 
+		<script id="item-template" type="text/x-handlebars-template">
+			<table class="score">
+			  <tr>
+				<td>{{name}}</td>
+			  </tr>
+			  <tr>
+				<td>{{description}}</td>
+			  </tr>
+			</table>
+		</script>
+		<script type="text/javascript">
+			// create a handlebars template
+			var source   = document.getElementById('item-template').innerHTML;
+			var template = Handlebars.compile(document.getElementById('item-template').innerHTML);
+		  
+			// DOM element where the Timeline will be attached
+			var container = document.getElementById('visualization');
+		  
+			// Create a DataSet (allows two way data-binding)
+			var items = new vis.DataSet([
+					  // round of 16
+					  {
+						  start: "2000-01-01T00:00:00",
+						  name: "Lascaux",
+						  description: "L'astronomie dans la préhistoire",
+						  end: "2010-01-01T00:00:00",
+					  },
+					  {
+						  start: "2015-01-01T00:00:00",
+						  name: "Erastothène",
+						  description: "L'astronomie dans l'antiqutié",
+						  end: "2018-01-01T00:00:00",
+					  },
+					  {
+						  start: "2020-01-01T00:00:00",
+						  name: "Hyppolite Fizeau",
+						  description: "L'astronomie au XIXème siècle",
+						  end: "2023-01-01T00:00:00",
+					  },
+					  ]);
+		  
+					  // Configuration for the Timeline
+					  var options = {
+					  // specify a template for the items
+					  template: template,
+					  };
+		  
+			// Configuration for the Timeline
+			var options = {
+			  // specify a template for the items
+			  template: template
+			};
+		  
+			// Create a Timeline
+			var timeline = new vis.Timeline(container, items, options);
+		</script>
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
@@ -94,8 +159,7 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ],
-				dependencies: [ { src: 'reveal-timeline.js',  async: true, condition: function() { return !!document.querySelector( '[data-timeline]' ); } } ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>
 	</body>
