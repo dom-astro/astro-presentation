@@ -7,7 +7,7 @@
 		<title>L'Astronomie à travers les âges</title>
 
 		<link rel="stylesheet" href="css/frise.css">
-		
+
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/serif.css">
@@ -17,19 +17,16 @@
 
 		<!-- JQuery -->
 		<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>		
-		
-		<!-- Vis.js for timeline -->
-		<link href="https://unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-
+		<link href="css/timeline.min.css" rel="stylesheet" />
+		<script src="js/timeline.js"></script>		
 	</head>
 	<body>
-		<div id="visualization"></div>
 		<div class="reveal">
 			<div class="slides">
 				<section>
 					<img src="img/intro.png" alt="L'astronomie à travers les âges" style="width: 100%; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+				</section>
+				<section>
 				</section>
 				<section>
 					<span>L’astronomie est l’une des plus anciennes sciences connues de l’humanité.
@@ -105,60 +102,38 @@
 				</section>
 			</div>
 		</div>
+		<div class="timeline">
+			<div class="timeline__wrap">
+				<div class="timeline__items">
+					<div class="timeline__item">
+						<div class="timeline__content">
+							Content / markup here
+						</div>
+					</div>
+					<div class="timeline__item">
+						<div class="timeline__content">
+							Content / markup here
+						</div>
+					</div>
+					<div class="timeline__item">
+						<div class="timeline__content">
+							Content / markup here
+						</div>
+					</div>
+					<div class="timeline__item">
+						<div class="timeline__content">
+							Content / markup here
+						</div>
+					</div>
+					<div class="timeline__item">
+						<div class="timeline__content">
+							Content / markup here
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-		<script id="item-template" type="text/x-handlebars-template">
-			<table class="score">
-			  <tr>
-				<td>{{name}}</td>
-			  </tr>
-			  <tr>
-				<td>{{description}}</td>
-			  </tr>
-			</table>
-		</script>
-		<script type="text/javascript">
-			// create a handlebars template
-			var source   = document.getElementById('item-template').innerHTML;
-			var template = Handlebars.compile(document.getElementById('item-template').innerHTML);
-		  
-			// DOM element where the Timeline will be attached
-			var container = document.getElementById('visualization');
-		  
-			// Create a DataSet (allows two way data-binding)
-			var items = new vis.DataSet([
-					  // round of 16
-					  {
-						  start: "-18000",
-						  name: "Lascaux",
-						  description: "L'astronomie dans la préhistoire",
-					  },
-					  {
-						  start: "-276",
-						  name: "Erastothène",
-						  description: "L'astronomie dans l'antiqutié",
-					  },
-					  {
-						  start: "1800",
-						  name: "Hyppolite Fizeau",
-						  description: "L'astronomie au XIXème siècle",
-					  },
-				  ]);
-		  
-					  // Configuration for the Timeline
-					  var options = {
-					  // specify a template for the items
-					  template: template,
-					  };
-		  
-			// Configuration for the Timeline
-			var options = {
-			  // specify a template for the items
-			  template: template
-			};
-		  
-			// Create a Timeline
-			var timeline = new vis.Timeline(container, items, options);
-		</script>
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
@@ -176,12 +151,21 @@
 
 			setInterval(() => {
 				if(location.href.includes("#")) {
-					$("#visualization").show();
-					$(".reveal").css("top","100px");
+					$(".timeline").show();
+					$(".timeline").css("top","50px");
+					$(".timeline").css("position","absolute");
+					$(".timeline").css("top","10px");
+					//$(".reveal").css("top","50px");
 				} else {
-					$("#visualization").hide();
+					$(".timeline").hide();
 				}
 			}, 500);	
+
+			jQuery('.timeline').timeline({
+				mode: 'horizontal',
+				visibleItems: 4,
+				forceVerticalMode: 800
+			});
 		</script>
 	</body>
 </html>
