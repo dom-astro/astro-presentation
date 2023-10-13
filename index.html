@@ -34,7 +34,6 @@
 						Au fil du temps, l’astronomie a évolué pour devenir une science complexe qui étudie les corps célestes et leur comportement dans l’univers.
 						L’étude de l’astronomie a permis aux scientifiques de découvrir des phénomènes tels que les trous noirs, les supernovas et les galaxies.
 						Aujourd’hui, l’astronomie continue d’être une science en constante évolution qui nous permet de mieux comprendre notre place dans l’univers.</span>
-					<!-- div data-timeline="'welcome.json"></div -->
 				</section>
 				<section>
 					Préhistoire (3 cycles: journée, lune, année. La grotte de Lascaux)
@@ -107,27 +106,27 @@
 				<div class="timeline__items">
 					<div class="timeline__item">
 						<div class="timeline__content">
-							Content / markup here
+							-18.000 / Lascaux
 						</div>
 					</div>
 					<div class="timeline__item">
 						<div class="timeline__content">
-							Content / markup here
+							-3.000 -> -1000 / Mésopotamie
 						</div>
 					</div>
 					<div class="timeline__item">
 						<div class="timeline__content">
-							Content / markup here
+							-600 -> 100 /  https://fr.wikipedia.org/wiki/Histoire_de_l%27astronomie 
 						</div>
 					</div>
 					<div class="timeline__item">
 						<div class="timeline__content">
-							Content / markup here
+							VIII -> XII / https://fr.wikipedia.org/wiki/Sciences_arabes
 						</div>
 					</div>
 					<div class="timeline__item">
 						<div class="timeline__content">
-							Content / markup here
+							XV -> XVII / Copernic, Galilée, Brahé, Kepler
 						</div>
 					</div>
 				</div>
@@ -152,10 +151,10 @@
 			setInterval(() => {
 				if(location.href.includes("#")) {
 					$(".timeline").show();
-					$(".timeline").css("top","50px");
 					$(".timeline").css("position","absolute");
-					$(".timeline").css("top","10px");
-					//$(".reveal").css("top","50px");
+					$(".timeline").css("top","-40px");
+					$(".timeline").css("left","-300px");
+					$(".timeline").css("transform","scale(0.6)");
 				} else {
 					$(".timeline").hide();
 				}
@@ -164,7 +163,8 @@
 			jQuery('.timeline').timeline({
 				mode: 'horizontal',
 				visibleItems: 4,
-				forceVerticalMode: 800
+				forceVerticalMode: 800,
+				startIndex: 0
 			});
 		</script>
 	</body>
