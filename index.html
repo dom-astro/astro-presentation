@@ -50,6 +50,7 @@
 				</section>
 				<section>
 					L'Egypte (Création de la journée de 24 heures)
+					https://www.bbc.com/afrique/articles/ce9klpz577vo
 				</section>
 				<section>
 					Antiquité (Ptolémé, Hipparque, Erastothène, Thales de Millet)
@@ -105,18 +106,37 @@
 			<div class="timeline__wrap">
 				<div class="timeline__items">
 					<div class="timeline__item">
-						<div class="timeline__content">
-							-18.000 / Lascaux
+						<div class="timeline__content" style="display: grid; gap: 5px;">
+							<div style="grid-column: 1 / 3; grid-row: 1;">
+								<img src="img/Lascaux-Taureau.jpg" width="100px">
+							</div>
+							<div style="grid-column: 5 / 12; grid-row: 1;">
+								<h2>Lascaux</h2>
+								<p>La salle des Taureaux -18.000  av. J.C.</p>
+							</div>
+						</div>
+					</div>
+					<div class="timeline__item">
+						<div class="timeline__content" style="display: grid; gap: 5px;">
+							<div style="grid-column: 1 / 3; grid-row: 1;">
+								<img src="img/deesse_nout.png" width="100px" height="75px">
+							</div>
+							<div style="grid-column: 5 / 12; grid-row: 1;">
+								<h2>Déesse Nout</h2>
+								<p>Division jour et nuit
+									-2.000 av. J.C.</p>
+							</div>
 						</div>
 					</div>
 					<div class="timeline__item">
 						<div class="timeline__content">
-							-3.000 -> -1000 / Mésopotamie
+							-1000 / Mésopotamie Ciel en 12 constellations (zodiaque) et base 60
+							https://astronomes.com/histoire-astronomie/lastronomie-en-mesopotamie/
 						</div>
 					</div>
 					<div class="timeline__item">
 						<div class="timeline__content">
-							-600 -> 100 /  https://fr.wikipedia.org/wiki/Histoire_de_l%27astronomie 
+							-600 -> 100 /  Antiquité (https://fr.wikipedia.org/wiki/Histoire_de_l%27astronomie)
 						</div>
 					</div>
 					<div class="timeline__item">
@@ -152,9 +172,9 @@
 				if(location.href.includes("#")) {
 					$(".timeline").show();
 					$(".timeline").css("position","absolute");
-					$(".timeline").css("top","-40px");
-					$(".timeline").css("left","-300px");
-					$(".timeline").css("transform","scale(0.6)");
+					$(".timeline").css("top","10px");
+					//$(".timeline").css("left","-300px");
+					//$(".timeline").css("transform","scale(0.8)");
 				} else {
 					$(".timeline").hide();
 				}
