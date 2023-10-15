@@ -34,6 +34,7 @@
 						Au fil du temps, l’astronomie a évolué pour devenir une science complexe qui étudie les corps célestes et leur comportement dans l’univers.
 						L’étude de l’astronomie a permis aux scientifiques de découvrir des phénomènes tels que les trous noirs, les supernovas et les galaxies.
 						Aujourd’hui, l’astronomie continue d’être une science en constante évolution qui nous permet de mieux comprendre notre place dans l’univers.</span>
+						https://astronomes.com/histoire-astronomie/
 				</section>
 				<section>
 					Préhistoire (3 cycles: journée, lune, année. La grotte de Lascaux)
@@ -53,7 +54,12 @@
 					https://www.bbc.com/afrique/articles/ce9klpz577vo
 				</section>
 				<section>
+					L'âge d'or de l'Islam
+					https://www.bbc.com/afrique/articles/ce9klpz577vo
+				</section>
+				<section>
 					Antiquité (Ptolémé, Hipparque, Erastothène, Thales de Millet)
+					https://fr.wikipedia.org/wiki/Histoire_de_l%27astronomie
 				</section>
 				<section>
 					Copernic
@@ -111,8 +117,9 @@
 								<img src="img/Lascaux-Taureau.jpg" width="100px">
 							</div>
 							<div style="grid-column: 5 / 12; grid-row: 1;">
-								<h2>Lascaux</h2>
-								<p>La salle des Taureaux -18.000  av. J.C.</p>
+								<h2>Préhistoire</h2>
+								<p>Lascaux et la salle des Taureaux
+									-18.000  av. J.C.</p>
 							</div>
 						</div>
 					</div>
@@ -122,26 +129,46 @@
 								<img src="img/deesse_nout.png" width="100px" height="75px">
 							</div>
 							<div style="grid-column: 5 / 12; grid-row: 1;">
-								<h2>Déesse Nout</h2>
-								<p>Division jour et nuit
+								<h2>Egypte</h2>
+								<p>Déesse Nout et la Division jour / nuit
 									-2.000 av. J.C.</p>
 							</div>
 						</div>
 					</div>
 					<div class="timeline__item">
-						<div class="timeline__content">
-							-1000 / Mésopotamie Ciel en 12 constellations (zodiaque) et base 60
-							https://astronomes.com/histoire-astronomie/lastronomie-en-mesopotamie/
+						<div class="timeline__content" style="display: grid; gap: 5px;">
+							<div style="grid-column: 1 / 3; grid-row: 1;">
+								<img src="img/Mesopotamie-tablette.jpg" width="100px" height="75px">
+							</div>
+							<div style="grid-column: 5 / 12; grid-row: 1;">
+								<h2>Mésopotamie</h2>
+								<p>Constellation et système sexagésimal
+									-1.000 av. J.C.</p>
+							</div>
 						</div>
 					</div>
 					<div class="timeline__item">
-						<div class="timeline__content">
-							-600 -> 100 /  Antiquité (https://fr.wikipedia.org/wiki/Histoire_de_l%27astronomie)
+						<div class="timeline__content" style="display: grid; gap: 5px;">
+							<div style="grid-column: 1 / 3; grid-row: 1;">
+								<img src="img/Antiquite-sphere-armillaire.png" width="100px" height="75px">
+							</div>
+							<div style="grid-column: 5 / 12; grid-row: 1;">
+								<h2>Antiquité</h2>
+								<p>Catalogue d'étoile et mesures
+									-600 -> -100  av. J.C.</p>
+							</div>
 						</div>
 					</div>
 					<div class="timeline__item">
-						<div class="timeline__content">
-							VIII -> XII / https://fr.wikipedia.org/wiki/Sciences_arabes
+						<div class="timeline__content" style="display: grid; gap: 5px;">
+							<div style="grid-column: 1 / 3; grid-row: 1;">
+								<img src="img/grande-ourse.jpg" width="100px" height="75px">
+							</div>
+							<div style="grid-column: 5 / 12; grid-row: 1;">
+								<h2>Age d'or arabe</h2>
+								<p>Etoiles et mesures
+									IXème -> XIIème siècle</p>
+							</div>
 						</div>
 					</div>
 					<div class="timeline__item">
@@ -172,7 +199,7 @@
 				if(location.href.includes("#")) {
 					$(".timeline").show();
 					$(".timeline").css("position","absolute");
-					$(".timeline").css("top","10px");
+					$(".timeline").css("top","150px");
 					//$(".timeline").css("left","-300px");
 					//$(".timeline").css("transform","scale(0.8)");
 				} else {
@@ -182,7 +209,7 @@
 
 			jQuery('.timeline').timeline({
 				mode: 'horizontal',
-				visibleItems: 4,
+				visibleItems: 5,
 				forceVerticalMode: 800,
 				startIndex: 0
 			});
