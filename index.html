@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>L'Astronomie à travers les âges</title>
+		<title>L'astronomie à travers les âges</title>
 
 		<link rel="stylesheet" href="css/frise.css">
 
@@ -24,7 +24,9 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<img src="img/intro.png" alt="L'astronomie à travers les âges" style="width: 100%; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+					<img src="img/intro-gauche.png" style="width: 30%; position: absolute; top: -55px; left: -325px;">
+					<img src="img/intro.png" style="width: 100%;">
+					<img src="img/intro-droite.png" style="width: 30%; position: absolute; top: -50px; left: 1025px;">
 				</section>
 				<section>
 				</section>
@@ -118,8 +120,8 @@
 							</div>
 							<div style="grid-column: 5 / 12; grid-row: 1;">
 								<h2>Préhistoire</h2>
-								<p>Lascaux et la salle des Taureaux
-									-18.000  av. J.C.</p>
+								<span>Lascaux</span>
+								<p>-18.000  av. J.C.</p>
 							</div>
 						</div>
 					</div>
@@ -130,8 +132,8 @@
 							</div>
 							<div style="grid-column: 5 / 12; grid-row: 1;">
 								<h2>Egypte</h2>
-								<p>Déesse Nout et la Division jour / nuit
-									-2.000 av. J.C.</p>
+								<span>Déesse Nout</span>
+								<p>-2.000 av. J.C.</p>
 							</div>
 						</div>
 					</div>
@@ -142,20 +144,20 @@
 							</div>
 							<div style="grid-column: 5 / 12; grid-row: 1;">
 								<h2>Mésopotamie</h2>
-								<p>Constellation et système sexagésimal
-									-1.000 av. J.C.</p>
+								<span>Les onstellations</span>
+								<p>-1.000 av. J.C.</p>
 							</div>
 						</div>
 					</div>
 					<div class="timeline__item">
 						<div class="timeline__content" style="display: grid; gap: 5px;">
 							<div style="grid-column: 1 / 3; grid-row: 1;">
-								<img src="img/Antiquite-sphere-armillaire.png" width="100px" height="75px">
+								<img src="img/Antiquite-sphere-armillaire.png" width="75px" height="75px">
 							</div>
 							<div style="grid-column: 5 / 12; grid-row: 1;">
 								<h2>Antiquité</h2>
-								<p>Catalogue d'étoile et mesures
-									-600 -> -100  av. J.C.</p>
+								<span>Géocentrisme</span>
+								<p>-600 -> -100  av. J.C.</p>
 							</div>
 						</div>
 					</div>
@@ -166,20 +168,28 @@
 							</div>
 							<div style="grid-column: 5 / 12; grid-row: 1;">
 								<h2>Age d'or arabe</h2>
-								<p>Etoiles et mesures
-									IXème -> XIIème siècle</p>
+								<span>Etoiles et mesures</span>
+								<p>IXème -> XIIème siècle</p>
 							</div>
 						</div>
 					</div>
 					<div class="timeline__item">
-						<div class="timeline__content">
-							XV -> XVII / Copernic, Galilée, Brahé, Kepler
+						<div class="timeline__content" style="display: grid; gap: 5px;">
+							<div style="grid-column: 1 / 3; grid-row: 1;">
+								<img src="img/heliocentrisme.jpg" width="100px" height="75px">
+							</div>
+							<div style="grid-column: 5 / 12; grid-row: 1;">
+								<h2>Révolution copernicienne</h2>
+								<span>Héliocentrisme</span>
+								<p>XVIème -> XVIIIème siècle</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
+		
+		Aperçu
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
@@ -196,20 +206,20 @@
 			});
 
 			setInterval(() => {
-				if(location.href.includes("#")) {
+				if(location.href.includes("#/1")) {
 					$(".timeline").show();
 					$(".timeline").css("position","absolute");
-					$(".timeline").css("top","150px");
+					$(".timeline").css("top","100px");
 					//$(".timeline").css("left","-300px");
 					//$(".timeline").css("transform","scale(0.8)");
 				} else {
 					$(".timeline").hide();
 				}
-			}, 500);	
+			}, 100);	
 
 			jQuery('.timeline').timeline({
 				mode: 'horizontal',
-				visibleItems: 5,
+				visibleItems: 4,
 				forceVerticalMode: 800,
 				startIndex: 0
 			});
