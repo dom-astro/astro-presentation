@@ -30,9 +30,9 @@ table .description {
     width: 120px;
 }
 
-.timeline-nav-button--next {
+/*.timeline-nav-button--next {
     left: 1325px
-}
+}*/
 
 .md-card-bg .md-card-subtitle,
 .md-card-bg .md-card-title {
@@ -48,4 +48,10 @@ table .description {
 
 .md-card-bg .md-card-subtitle {
     margin-top: 10px;
+}
+
+.logo {
+    position: absolute;
+    left: 25px;
+    top: 675px;
 }
