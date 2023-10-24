@@ -51,7 +51,7 @@ table .description {
 }
 
 .logo {
-    position: absolute;
+    position: fixed;
+    top: 90%;
     left: 25px;
-    top: 675px;
 }
