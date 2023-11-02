@@ -47,20 +47,7 @@
 							Shhh, these are your private notes 📝
 						  </aside>
 				</section>
-				<section>
-					<section>
-						Préhistoire (3 cycles: journée, lune, année. La grotte de Lascaux)
-					</section>
-					<section>
-						La grotte de Lascaux, située dans la vallée de la Vézère en Dordogne, est l’une des plus importantes grottes ornées du Paléolithique supérieur
-						par le nombre et la qualité esthétique de ses peintures et gravures, principalement des représentations d’animaux.
-						Les peintures rupestres de Lascaux témoignent d’une longue tradition d’observation du ciel.
-						Les scientifiques ont découvert que les peintures rupestres représentent des constellations telles que le Taureau, Orion et les Pléiades.
-						Les hommes préhistoriques utilisaient probablement ces constellations pour suivre le temps et les saisons en observant les mouvements des étoiles.
-					</section>
-					<section>
-						C’est ensuite au Néolithique que de nouvelles preuves de l’intérêt de l’Homme pour l’étude du ciel apparaissent avec les mégalithes. Ces monuments constitués d’une ou plusieurs pierres de grande taille érigées sans mortier ni ciment auraient un rôle multiple : social et culturel, mais aussi astronomique.
-					</section>
+				<section id="lascaux">
 				</section>
 				<section>
 					La Mésopotamie
@@ -133,24 +120,24 @@
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script src="js/showTimeline.js"></script>
+		<script src="js/showPrez.js"></script>
 		
 		<script>
 			initTimeline();
+			var first=true;
+			setInterval(() => {
+				if (first) {
+					first=false;
+					initPrez();
+				}
+			}, 1000);
 
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-				width: 1200,
-				height: 700,
-				slideNumber: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
 
 /*			setInterval(() => {
+	Reveal.layout();
 				if( location.href.split("#/").pop()=="1" ) {
 					$(".timeline").show();
 					$(".timeline").css("position","absolute");

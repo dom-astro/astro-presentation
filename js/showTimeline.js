@@ -16,6 +16,11 @@ function initTimeline() {
         moveItems: 4
     });
 
+    /*setInterval(() => {
+        if( location.href.split("#/").pop()=="1" ) {
+            Reveal.sync();
+        }
+    }, 100);*/
 }
 
 function addPrehistoire() {
