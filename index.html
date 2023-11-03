@@ -7,6 +7,7 @@
 		<title>L'astronomie à travers les âges</title>
 
 		<link rel="stylesheet" href="css/frise.css">
+		<link rel="stylesheet" href="css/lascaux.css">
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -47,7 +48,7 @@
 							Shhh, these are your private notes 📝
 						  </aside>
 				</section>
-				<section id="lascaux">
+				<section class="lascaux">
 				</section>
 				<section>
 					La Mésopotamie
@@ -120,17 +121,20 @@
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
 		<script src="js/showTimeline.js"></script>
-		<script src="js/showPrez.js"></script>
+		<script src="js/prez.js"></script>
+		<script src="js/lascaux.js"></script>
 		
 		<script>
 			initTimeline();
-			var first=true;
+			initPrez();
+
+			/*var first=true;
 			setInterval(() => {
 				if (first) {
 					first=false;
 					initPrez();
 				}
-			}, 1000);
+			}, 1000);*/
 
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/

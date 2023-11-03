@@ -1,0 +1,64 @@
+.lascaux {
+    text-align: left;
+}
+.lascaux-intro>span {
+    position: relative;
+    top: -50px;
+}
+
+.lascaux-cycles-soleil,
+.lascaux-cycles-saisons {
+    text-align: left;
+}
+
+.lascaux-cycles-lune {
+    text-align: right;
+}
+
+.lascaux-cycles-soleil>img {
+    width: 200px;
+}
+
+.lascaux-cycles-soleil>span {   
+    position: relative;
+    top: -100px;
+    left: 10px;
+}
+
+.lascaux-cycles-lune>span  {
+    position: relative;
+    top: -300px;
+    right: 10px;
+}
+
+.lascaux-cycles-lune>img {
+    width: 200px;
+    position: relative;
+    top: -200px;
+}
+
+.lascaux-cycles-saisons>span {
+    position: relative;
+    top: -350px;
+    left: 10px;
+}
+
+.lascaux-cycles-saisons>video {
+    position: relative;
+    top: -250px;
+    width: 250px;
+}
+
+.lascaux-cycles-stellarium {
+    text-align: left;
+}
+
+.lascaux-cycles-stellarium>span {
+    position: relative;
+    top: 0px;
+    text-align: left;
+}
+
+.lascaux-cycles-stellarium>span>a {
+    color: lightseagreen;
+}
