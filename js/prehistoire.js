@@ -28,8 +28,8 @@ class Prehistoire {
                 L'humanité, en regardant le ciel, s'est petit à petit aperçu que plusieurs cycles régissaient le passage du temps.\
                 <p class='fragment fade-up lascaux-cycles-stellarium'><span>Je vous propose de les découvrir à travers le site <a href='https://stellarium-web.org/' target='_blank'>stellarium-web.org</a><br>\
                 en faisant défiler une année entière jour par jour à 8h00 du matin.</span></p>\
-                <p class='fragment fade-right lascaux-cycles-soleil'><img src='img/jour-nuit.gif'><span>L'alternance jour / nuit.</span></p>\
-                <p class='fragment fade-left lascaux-cycles-lune'><span>Le cycle lunaire.</span><img src='img/lune.gif' width='150px'></p>\
+                <p class='fragment fade-right lascaux-cycles-soleil'><img src='img/jour-nuit.gif' class='img-fluid rounded'><span>L'alternance jour / nuit.</span></p>\
+                <p class='fragment fade-left lascaux-cycles-lune'><span>Le cycle lunaire.</span><img src='img/lune.gif' width='150px' class='img-fluid rounded'></p>\
                 <p class='fragment fade-right lascaux-cycles-saisons'><video muted data-autoplay src='video/saisons.mp4'></video><span>La ronde des saisons.</span></p>\
             </section>"
         );
