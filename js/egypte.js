@@ -1,12 +1,42 @@
-function addLascaux() {
+class Egypte {
+    constructor() {
+        this.class=".egypte";
+        this.write();
+    }
 
     /* Introduction */
-    $(".lascaux").append("\
-    <section style='text-align: center;'>\
-        <span style='font-size: var(--r-heading1-size); position: relative; top: -200px;'>Partie I</span><br><br>\
-        <span style='font-size: var(--r-heading2-size); position: relative; top: -200px;'>La préhistoire</span>\
-    </section>"
-    );
+    intro() {
+        $(this.class).append("\
+        <section style='text-align: center;'>\
+            <span style='font-size: var(--r-heading1-size); position: relative; top: -200px;'>Partie II</span><br><br>\
+            <span style='font-size: var(--r-heading2-size); position: relative; top: -200px;'>L'Egypte ancienne</span>\
+        </section>"
+        );
+
+        $(this.class).append("\
+        <section class='egypte-intro'>\
+            <span style='font-size: 50px;'>Le calendrier égyptien est le premier calendrier solaire connue.\
+            Les égyptiens le définissent comme le temps nécessaire pour une récolte.\
+            Il se base sur le lever héliaque de l'étoile Sirius qui annonçait la crue du Nil.</span>\
+            <figure class='figure'>\
+                <img src='img/sirius.jpg' class='figure-img img-fluid rounded' width='100%' alt='Lever hélique de Sirius'>\
+                <figcaption class='figure-caption'>Simulation du lever héliaque de Sirius le 15 juillet 3000 avant J.C. Crédit - S&T, Stellarium</figcaption>\
+            </figure>\
+        </section>"
+        );
+    }
+
+    write() {
+        this.intro();
+    }
+}
+    /*					L'Egypte (Création de la journée de 24 heures)
+					https://www.bbc.com/afrique/articles/ce9klpz577vo
+*/
+
+ function addLascaux() {
+
+    /* Introduction */
 
     $(".lascaux").append("\
     <section class='lascaux-intro'>\
@@ -19,7 +49,7 @@ function addLascaux() {
     $(".lascaux").append("\
     <section class='lascaux-cycles'>\
         L'humanité, en regardant le ciel, s'est petit à petit aperçu que plusieurs cycles régissaient le passage du temps.\
-        <p class='fragment fade-up lascaux-cycles-stellarium'><span>Je vous propose de les découvrire à travers le site <a href='https://stellarium-web.org/' target='_blank'>stellarium-web.org</a><br>\
+        <p class='fragment fade-up lascaux-cycles-stellarium'><span>Je vous propose de les découvrir à travers le site <a href='https://stellarium-web.org/' target='_blank'>stellarium-web.org</a><br>\
         en faisant défiler une année entière jour par jour à 8h00 du matin.</span></p>\
         <p class='fragment fade-right lascaux-cycles-soleil'><img src='img/jour-nuit.gif'><span>L'alternance jour / nuit.</span></p>\
         <p class='fragment fade-left lascaux-cycles-lune'><span>Le cycle lunaire.</span><img src='img/lune.gif' width='150px'></p>\
@@ -51,13 +81,13 @@ function addLascaux() {
     $(".lascaux").append("\
     <section>\
         <span style='font-size: var(--r-heading3-size);'>Les mégalithes de Stonehenge </span>\
-        <span style='font-size: 30px;'>(entre -3.500 et -3.000 ans av. J.-C.)</span>\
+        <span style='font-size: 30px;'>(entre 3.700 et 1.600 av. J.-C.)</span>\
         <p class='fragment fade-down lascaux-stonehenge'>\
-            <img src='img/stonehenge.jpg' class='rounded border border-danger-subtle' alt='Stonehedge'>\
+            <img src='img/stonehenge.jpg' class='rounded border border-danger-subtle' alt='Stonehenge'>\
             <span>Cette architecture est représentative de l'architecture de certains monuments mégalithiques qui\
             répondrait à des critères d'orientation astronomique, leur permettant d'être utilisés comme calendriers solaires (solstice, équinoxe)\
             ou pour la prévision d'évènements astraux réguliers.</span>\
-            <span class='fig-caption'>Soltice d'été à Stonehedge</span>\
+            <span class='fig-caption'>Soltice d'été à Stonehenge</span>\
         </p>\
     </section>"
     );

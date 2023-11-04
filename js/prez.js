@@ -1,5 +1,8 @@
+
+
 function initPrez() {
-    addLascaux();
+    const prehistoire = new Prehistoire();
+    const egypte = new Egypte();
 
     Reveal.initialize({
         hash: true,
