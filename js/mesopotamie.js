@@ -1,6 +1,6 @@
-class Egypte {
+class Mesopotamie {
     constructor() {
-        this.class=".egypte";
+        this.class=".mesopotamie";
         this.write();
     }
 
@@ -8,8 +8,8 @@ class Egypte {
     intro() {
         $(this.class).append("\
         <section style='text-align: center;'>\
-            <span style='font-size: var(--r-heading1-size); position: relative; top: -200px;'>Partie II</span><br><br>\
-            <span style='font-size: var(--r-heading2-size); position: relative; top: -200px;'>L'Egypte ancienne</span>\
+            <span style='font-size: var(--r-heading1-size); position: relative; top: -200px;'>Partie III</span><br><br>\
+            <span style='font-size: var(--r-heading2-size); position: relative; top: -200px;'>La Mésopotamie</span>\
         </section>"
         );
     }
@@ -54,8 +54,6 @@ class Egypte {
 
     write() {
         this.intro();
-        this.nout();
-        this.calendrier();
     }
 }
     /*					L'Egypte (Création de la journée de 24 heures)

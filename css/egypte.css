@@ -2,7 +2,12 @@
     text-align: left;
 }
 
-.egypte-intro>figure {
+.egypte-calendrier>figure {
     position: relative;
     left: 20%;
+}
+
+.egypte-nout    span {
+    position: relative;
+    top: 10px;
 }

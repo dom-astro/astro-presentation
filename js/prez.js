@@ -3,6 +3,7 @@
 function initPrez() {
     const prehistoire = new Prehistoire();
     const egypte = new Egypte();
+    const mesopotamie = new Mesopotamie();
 
     Reveal.initialize({
         hash: true,
