@@ -22,19 +22,31 @@ class Egypte {
             <div class='row'>\
                 <div class='col-4'>\
                     <figure class='figure'>\
-                        <img src='img/nout.jpg' class='figure-img img-fluid rounded' width='100%' alt='Divinité Nout'>\
+                        <img src='img/nout.jpg' class='figure-img img-fluid rounded' alt='Divinité Nout'>\
                         <figcaption class='figure-caption'>Nout, une représentation de la voie lactée?</figcaption>\
                     </figure>\
                 </div>\
                 <div class='col-8'>\
-                    <span>En Egypte, la voûte céleste est représentée par la divinité Nout.</span><br>\
-                    <span>Son rire est le tonnerre et ses larmes la pluie.</span><br>\
-                    <span>Chaque soir elle avale le soleil pour le faire naître chaque matin.</span>\
+                    <span>L'une des premières représentations astronomiques en Egypte est la voie lactèe par l'intermédiare\
+                    la divinité Nout.</span><br><br>\
+                    <span>Dans la représentation ci-contre on peut voir:\
+                    <ul>\
+                        <li>Nout la déesse du ciel</li>\
+                        <li>Shou dieu de l'air qui soutient le ciel</li>\
+                        <li>Geb dieu de la terre</li>\
+                    </ul><br><br>\
+                    <span>On dit de la déesse Nout, que son rire est le tonnerre et ses larmes la pluie.\
+                    Chaque soir elle avale le soleil pour le faire naître chaque matin.</span>\
                     </section>\
                 </div>\
             </div>\
         </section>"
         );
+
+        this.references.push({ page: 'nout'
+                             , url: ['https://astronomes.com/histoire-astronomie/lastronomie-de-legypte-ancienne/']
+                            });
+        
     }    
 
     /* Sirius */
@@ -62,14 +74,16 @@ class Egypte {
     <section class='egypte-calendrier'>\
         <div class='row'>\
             <div class='col-7'>\
-                <span>Pour définir leur calendrier, les egyptiens sont partis de Sirius\
+                <span>Pour définir leur calendrier, les egyptiens sont donc partis de Sirius\
                 et ont sélectionnées d'autres étoiles semblables avec les propriétés ci-dessous:</span>\
                 <p>\
                     <ul>\
                         <li>Chaque nuit une dizaine des ces étoiles sont visibles</li>\
-                        <li>Tous les 10 jours, une étoile disparait pendant q'une autre apparait</li>\
+                        <li>Tous les 10 jours (décade), une étoile disparait pendant q'une autre apparait</li>\
                     </ul>\
                 </p>\
+                <span>Le calendrier était donc divisé en décade de 10 jours sur 12 mois. Soit 360 jours auxquels les egyptiens\
+                ajoutent 5 jours dit épagomènes pour faire une année complète.</span>\
             </div>\
             <div class='col-5'>\
                 <table style='font-size: 20px'>\
@@ -86,37 +100,53 @@ class Egypte {
                     <tr><td>15 avril au 14 mai: Payni</td></tr>\
                     <tr><td>15 mai au 13 juin: Epiphi</td></tr>\
                     <tr><td>14 juin au 13 juillet: Mésori</td></tr>\
-                    <tr><td></td></tr>\
+                    <tr><td rowspan='5'>Jours épagomènes</td><td>14 juillet: Osiris</td></tr>\
+                    <tr><td>15 juillet: Horus</td></tr>\
+                    <tr><td>16 juille: Setht</td></tr>\
+                    <tr><td>17 juillet: Isis</td></tr>\
+                    <tr><td>18 juillet: Nephtys</td></tr>\
+                    <tr></tr>\
                 </table>\
             </div>\
         </div>\
-        <span>Le calendrier était donc divisé en décade de 10 jours sur 12 mois. Soit 360 jours auxquels les egyptiens\
-        ajoutent 5 jours dit épagomènes pour faire une année complète.</span>\
     </section>"
     );
 
-    this.references.push({ page: 'calendrier'
-                         , url: ['https://www.pourlascience.fr/sd/archeologie/un-chemin-d-etoiles-pour-les-defunts-8993.php'
-                                ,'https://www.bbc.com/afrique/articles/ce9klpz577vo'
-                                ,'https://fr.wikipedia.org/wiki/Horloge_stellaire_%C3%A9gyptienne']
-                        });
+    this.references.push(
+        { page: 'calendrier'
+        , url: ['https://www.pourlascience.fr/sd/archeologie/un-chemin-d-etoiles-pour-les-defunts-8993.php'
+               ,'https://www.bbc.com/afrique/articles/ce9klpz577vo'
+               ,'https://fr.wikipedia.org/wiki/Horloge_stellaire_%C3%A9gyptienne']
+        }
+    );
 }    
 
    /* Meshet */
    meshet() {
     $(this.class).append("\
     <section class='egypte-meshet'>\
-        <span>Calendrier égyptien basée sur la table stellaire de Meshet</span>\
-        <figure class='figure'>\
-            <img src='img/table-stellaire-meshet.jpg' class='figure-img img-fluid rounded' width='100%' alt='Table stellaire de Meshet'>\
-            <figcaption class='figure-caption'>Table stellaire égyptienne. Adaptation des tables de Neugebauer et Parker ('Egyptian Astronomical Texts') et de la table de Mesheh (d'après Pierre Lacau)</figcaption>\
-        </figure>\
+        <div class='row'>\
+            <div class='col-5'>\
+                <span>Dans ce calendrier, les égyptiens ont découpés les nuits en 12 heures, chaque heure correspondant au lever héliaque d'une étoile.</span>\
+                <br>\
+                <span>Pour coïncider avec les décades, chaque étoile était choisie pour que son lever héliaque soit séparé de 10 jours par rapport à la précédente.</span>\
+            </div>\
+            <div class='col-7'>\
+                <span>Calendrier égyptien basée sur la table stellaire de Meshet</span>\
+                <figure class='figure'>\
+                    <img src='img/table-stellaire-meshet.jpg' class='figure-img img-fluid rounded' width='100%' alt='Table stellaire de Meshet'>\
+                    <figcaption class='figure-caption'>Table stellaire égyptienne. Adaptation des tables de Neugebauer et Parker ('Egyptian Astronomical Texts') et de la table de Mesheh (d'après Pierre Lacau)</figcaption>\
+                </figure>\
+            </div>\
     </section>"
     );
 
-    this.references.push({ page: 'calendrier'
-                         , url: ['https://fr.wikipedia.org/wiki/Horloge_stellaire_%C3%A9gyptienne']
-                        });
+    this.references.push(
+        { page: 'meshet'
+        , url: ['https://fr.wikipedia.org/wiki/Horloge_stellaire_%C3%A9gyptienne'
+               ,'https://astronomes.com/histoire-astronomie/lastronomie-de-legypte-ancienne/']
+        }
+    );
 }    
 
 write() {

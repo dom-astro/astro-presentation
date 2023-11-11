@@ -7,9 +7,21 @@
     left: 20%;
 }
 
+.egypte-nout figure>img {
+    width: 110%;
+}
+
 .egypte-nout>span {
     position: relative;
     top: 10px;
+}
+
+.egypte-nout .col-8 {
+    font-size: 35px;
+}
+
+.egypte-calendrier {
+    font-size: 35px;
 }
 
 .egypte-calendrier span {
@@ -21,3 +33,12 @@
     text-align: center;
 }
 
+.egypte-meshet .col-5{
+    text-align: left;
+    font-size: 35px;
+}
+
+.egypte-meshet .col-7{
+    text-align: center;
+    font-size: 40px;
+}

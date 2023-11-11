@@ -1,6 +1,7 @@
 class Prehistoire {
     constructor() {
         this.class=".prehistoire";
+        this.references=[];
         this.write();
     }
     
@@ -54,6 +55,12 @@ class Prehistoire {
                     </span>\
                 </p>\
             </section>"
+        );
+
+        this.references.push(
+            { page: 'calendrier'
+            , url: ['https://www.stelvision.com/astro/qui-etaient-les-tout-premiers-astronomes/']
+            }
         );
     }
 
