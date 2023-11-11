@@ -1,6 +1,7 @@
 class Egypte {
     constructor() {
         this.class=".egypte";
+        this.references=[];
         this.write();
     }
 
@@ -13,22 +14,6 @@ class Egypte {
         </section>"
         );
     }
-
-    /* Calendrier */
-    calendrier() {
-        $(this.class).append("\
-        <section class='egypte-calendrier'>\
-            <span style='font-size: 50px;'>Le calendrier égyptien est le premier calendrier solaire connu.\
-            Les égyptiens le définissaient comme le temps nécessaire pour une récolte.\
-            Ils se basaient sur le lever héliaque de l'étoile Sirius qui annonçait la crue du Nil.</span>\
-            <figure class='figure'>\
-                <img src='img/sirius.jpg' class='figure-img img-fluid rounded' width='100%' alt='Lever héliaque de Sirius'>\
-                <figcaption class='figure-caption'>Simulation du lever héliaque de Sirius le 15 juillet 3000 avant J.C. Crédit - S&T, Stellarium</figcaption>\
-            </figure>\
-        </section>"
-        );
-    }    
-
 
     /* Nout divinité du ciel */
     nout() {
@@ -44,7 +29,7 @@ class Egypte {
                 <div class='col-8'>\
                     <span>En Egypte, la voûte céleste est représentée par la divinité Nout.</span><br>\
                     <span>Son rire est le tonnerre et ses larmes la pluie.</span><br>\
-                    <span>Chaque soir elle avale le soleil pour le faire naitre chaque matin.</span>\
+                    <span>Chaque soir elle avale le soleil pour le faire naître chaque matin.</span>\
                     </section>\
                 </div>\
             </div>\
@@ -52,71 +37,93 @@ class Egypte {
         );
     }    
 
-    write() {
+    /* Sirius */
+    sirius() {
+        $(this.class).append("\
+        <section class='egypte-sirius'>\
+            <span style='font-size: 50px;'>Le calendrier égyptien est le premier calendrier solaire connu.\
+            Les égyptiens le définissaient comme le temps nécessaire pour une récolte.\
+            Ils se basaient sur le lever héliaque de l'étoile Sirius qui annonçait la crue du Nil.</span>\
+            <figure class='figure'>\
+                <img src='img/sirius.jpg' class='figure-img img-fluid rounded' width='100%' alt='Lever héliaque de Sirius'>\
+                <figcaption class='figure-caption'>Simulation du lever héliaque de Sirius le 15 juillet 3000 avant J.C. Crédit - S&T, Stellarium</figcaption>\
+            </figure>\
+        </section>"
+        );
+
+        this.references.push({ page: 'sirius'
+                             , url: ['https://www.pourlascience.fr/sd/archeologie/un-chemin-d-etoiles-pour-les-defunts-8993.php']
+                            });
+    }    
+
+   /* Calendrier */
+   calendrier() {
+    $(this.class).append("\
+    <section class='egypte-calendrier'>\
+        <div class='row'>\
+            <div class='col-7'>\
+                <span>Pour définir leur calendrier, les egyptiens sont partis de Sirius\
+                et ont sélectionnées d'autres étoiles semblables avec les propriétés ci-dessous:</span>\
+                <p>\
+                    <ul>\
+                        <li>Chaque nuit une dizaine des ces étoiles sont visibles</li>\
+                        <li>Tous les 10 jours, une étoile disparait pendant q'une autre apparait</li>\
+                    </ul>\
+                </p>\
+            </div>\
+            <div class='col-5'>\
+                <table style='font-size: 20px'>\
+                    <th>Saison</th><th>Mois</th>\
+                    <tr><td rowspan='4' title='Saison de l’inondation des cultures par le Nil'>Akeht</td><td>19 juillet au 17 août: Thout</td></tr>\
+                    <tr><td>18 août au 16 septembre: Phaoph</td></tr>\
+                    <tr><td>17 septembre au 16 octobre: Athyr</td></tr>\
+                    <tr><td>17 octobre au 15 novembre: Khoiak</td></tr>\
+                    <tr><td rowspan='4' title='Saison de la décrue du Nil'>Peret</td><td>16 novembre au 15 décembre: Tybi</td></tr>\
+                    <tr><td>16 décembre au 14 janvier: Méchir</td></tr>\
+                    <tr><td>15 janvier au 13 février: Phaminoth</td></tr>\
+                    <tr><td>14 février au 15 mars: Pharmouti</td></tr>\
+                    <tr><td rowspan='4' title='Saison des moissons'>Chémou</td><td>16 mars au 14 avril: Pachon</td></tr>\
+                    <tr><td>15 avril au 14 mai: Payni</td></tr>\
+                    <tr><td>15 mai au 13 juin: Epiphi</td></tr>\
+                    <tr><td>14 juin au 13 juillet: Mésori</td></tr>\
+                    <tr><td></td></tr>\
+                </table>\
+            </div>\
+        </div>\
+        <span>Le calendrier était donc divisé en décade de 10 jours sur 12 mois. Soit 360 jours auxquels les egyptiens\
+        ajoutent 5 jours dit épagomènes pour faire une année complète.</span>\
+    </section>"
+    );
+
+    this.references.push({ page: 'calendrier'
+                         , url: ['https://www.pourlascience.fr/sd/archeologie/un-chemin-d-etoiles-pour-les-defunts-8993.php'
+                                ,'https://www.bbc.com/afrique/articles/ce9klpz577vo'
+                                ,'https://fr.wikipedia.org/wiki/Horloge_stellaire_%C3%A9gyptienne']
+                        });
+}    
+
+   /* Meshet */
+   meshet() {
+    $(this.class).append("\
+    <section class='egypte-meshet'>\
+        <span>Calendrier égyptien basée sur la table stellaire de Meshet</span>\
+        <figure class='figure'>\
+            <img src='img/table-stellaire-meshet.jpg' class='figure-img img-fluid rounded' width='100%' alt='Table stellaire de Meshet'>\
+            <figcaption class='figure-caption'>Table stellaire égyptienne. Adaptation des tables de Neugebauer et Parker ('Egyptian Astronomical Texts') et de la table de Mesheh (d'après Pierre Lacau)</figcaption>\
+        </figure>\
+    </section>"
+    );
+
+    this.references.push({ page: 'calendrier'
+                         , url: ['https://fr.wikipedia.org/wiki/Horloge_stellaire_%C3%A9gyptienne']
+                        });
+}    
+
+write() {
         this.intro();
         this.nout();
+        this.sirius();
         this.calendrier();
+        this.meshet();
     }
-}
-    /*					L'Egypte (Création de la journée de 24 heures)
-					https://www.bbc.com/afrique/articles/ce9klpz577vo
-*/
-
- function addLascaux() {
-
-    /* Introduction */
-
-    $(".lascaux").append("\
-    <section class='lascaux-intro'>\
-        <span style='font-size: 50px;'>L'astronomie est, parmi l'ensemble des sciences, celle qui est considérée comme la plus ancienne.</span>\
-        <p class='fragment fade-up'><img src='img/nuage.png'></p>\
-    </section>"
-    );
-
-    /* Cycles astronomiques */
-    $(".lascaux").append("\
-    <section class='lascaux-cycles'>\
-        L'humanité, en regardant le ciel, s'est petit à petit aperçu que plusieurs cycles régissaient le passage du temps.\
-        <p class='fragment fade-up lascaux-cycles-stellarium'><span>Je vous propose de les découvrir à travers le site <a href='https://stellarium-web.org/' target='_blank'>stellarium-web.org</a><br>\
-        en faisant défiler une année entière jour par jour à 8h00 du matin.</span></p>\
-        <p class='fragment fade-right lascaux-cycles-soleil'><img src='img/jour-nuit.gif'><span>L'alternance jour / nuit.</span></p>\
-        <p class='fragment fade-left lascaux-cycles-lune'><span>Le cycle lunaire.</span><img src='img/lune.gif' width='150px'></p>\
-        <p class='fragment fade-right lascaux-cycles-saisons'><video muted data-autoplay src='video/saisons.mp4'></video><span>La ronde des saisons.</span></p>\
-    </section>"
-    );
-
-    // La grotte de Lascaux
-    $(".lascaux").append("\
-    <section class='lascaux-peintures'>\
-        <span style='font-size: var(--r-heading3-size);'>La grotte de Lascaux </span>\
-        <span style='font-size: 30px;'>(entre -20.000 et -18.000 ans av. J.-C.)</span>\
-        <p class='fragment fade-down lascaux-peintures-taureau'>\
-            <img src='img/Lascaux-Taureau.jpg' class='rounded border border-danger-subtle' alt='Lascaux'>\
-            <span>L'une des toutes premières représentations du ciel se trouve dans la grotte de Lascaux\
-            située dans la vallée de la Vézère en Dordogne.<br>\
-            D'après les scientifiques, certaines peintures rupestres\
-            représentent des constellations telles que le Taureau, Orion et les Pléiades.</span>\
-            <span class='fig-caption'>Crédit : Ministère de la Culture/Centre National de la Préhistoire</span>\
-        </p>\
-        <p class='fragment fade-up lascaux-peintures-end'>\
-            <span>Faisons la comparaison avec la constellation du taureau à travers le site <a href='https://stellarium-web.org/' target='_blank'>stellarium-web.org</a>\
-            </span>\
-        </p>\
-    </section>"
-    );
-
-    // Stonehenge
-    $(".lascaux").append("\
-    <section>\
-        <span style='font-size: var(--r-heading3-size);'>Les mégalithes de Stonehenge </span>\
-        <span style='font-size: 30px;'>(entre 3.700 et 1.600 av. J.-C.)</span>\
-        <p class='fragment fade-down lascaux-stonehenge'>\
-            <img src='img/stonehenge.jpg' class='rounded border border-danger-subtle' alt='Stonehenge'>\
-            <span>Cette architecture est représentative de l'architecture de certains monuments mégalithiques qui\
-            répondrait à des critères d'orientation astronomique, leur permettant d'être utilisés comme calendriers solaires (solstice, équinoxe)\
-            ou pour la prévision d'évènements astraux réguliers.</span>\
-            <span class='fig-caption'>Soltice d'été à Stonehenge</span>\
-        </p>\
-    </section>"
-    );
 }

@@ -2,12 +2,22 @@
     text-align: left;
 }
 
-.egypte-calendrier>figure {
+.egypte-sirius>figure {
     position: relative;
     left: 20%;
 }
 
-.egypte-nout    span {
+.egypte-nout>span {
     position: relative;
     top: 10px;
 }
+
+.egypte-calendrier span {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.egypte-meshet {
+    text-align: center;
+}
+
