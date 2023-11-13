@@ -9,8 +9,15 @@ class Prehistoire {
     intro() {
         $(this.class).append("\
         <section style='text-align: center;'>\
-            <span style='font-size: var(--r-heading1-size); position: relative; top: -200px;'>Partie I</span><br><br>\
-            <span style='font-size: var(--r-heading2-size); position: relative; top: -200px;'>La préhistoire</span>\
+            <div class='card border-dark mb-100'>\
+                <div class='card-header'><h2 class='card-title'>Partie I</h2></div>\
+                <div class='card-body text-dark'>\
+                    <h3 class='card-title'>La préhistoire</h3>\
+                    <p class='card-text'>De Lascaux à Stonehenge</p>\
+                </div>\
+            </div>\
+            <!-- span style='font-size: var(--r-heading1-size); position: relative; top: -200px;'>Partie I</span><br><br>\
+            <span style='font-size: var(--r-heading2-size); position: relative; top: -200px;'>La préhistoire</span -->\
         </section>"
         );
 
@@ -20,6 +27,9 @@ class Prehistoire {
             <p class='fragment fade-up'><img src='img/nuage.png'></p>\
         </section>"
         );
+
+        $(this.class).append("\
+        ");
     }
 
     /* Cycles astronomiques */

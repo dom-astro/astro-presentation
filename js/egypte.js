@@ -9,8 +9,15 @@ class Egypte {
     intro() {
         $(this.class).append("\
         <section style='text-align: center;'>\
-            <span style='font-size: var(--r-heading1-size); position: relative; top: -200px;'>Partie II</span><br><br>\
-            <span style='font-size: var(--r-heading2-size); position: relative; top: -200px;'>L'Egypte ancienne</span>\
+            <div class='card border-dark mb-100'>\
+                <div class='card-header'><h2 class='card-title'>Partie II</h2></div>\
+                <div class='card-body text-dark'>\
+                    <h3 class='card-title'>L'Egypte ancienne</h3>\
+                    <p class='card-text'>La déesse Nout et le 1er calendrier solaire</p>\
+                </div>\
+            </div>\
+            <!-- span style='font-size: var(--r-heading1-size); position: relative; top: -200px;'>Partie II</span><br><br>\
+            <span style='font-size: var(--r-heading2-size); position: relative; top: -200px;'>L'Egypte ancienne</span -->\
         </section>"
         );
     }

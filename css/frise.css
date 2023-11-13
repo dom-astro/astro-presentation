@@ -60,3 +60,7 @@ body {
     background-image: url("../img/old-paper.jpg");
     background-repeat:  repeat;
 }
+
+.card {
+    width: 100%;
+}

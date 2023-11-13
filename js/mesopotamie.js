@@ -8,8 +8,15 @@ class Mesopotamie {
     intro() {
         $(this.class).append("\
         <section style='text-align: center;'>\
-            <span style='font-size: var(--r-heading1-size); position: relative; top: -200px;'>Partie III</span><br><br>\
-            <span style='font-size: var(--r-heading2-size); position: relative; top: -200px;'>La Mésopotamie</span>\
+            <div class='card border-dark mb-100'>\
+                <div class='card-header'><h2 class='card-title'>Partie III</h2></div>\
+                <div class='card-body text-dark'>\
+                    <h3 class='card-title'>La Mésopotamie</h3>\
+                    <p class='card-text'>La base sexagésimale, premières observations et constellations</p>\
+                </div>\
+            </div>\
+            <!-- span style='font-size: var(--r-heading1-size); position: relative; top: -200px;'>Partie III</span><br><br>\
+            <span style='font-size: var(--r-heading2-size); position: relative; top: -200px;'>La Mésopotamie</span -->\
         </section>"
         );
     }
