@@ -20,15 +20,6 @@ table .description {
     display: none;
   }
 
-.logo {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-}
-
-.logo img {
-    width: 120px;
-}
 
 /*.timeline-nav-button--next {
     left: 1325px
@@ -50,16 +41,6 @@ table .description {
     margin-top: 10px;
 }
 
-.logo {
-    position: fixed;
-    top: 90%;
-    left: 25px;
-}
-
-body {
-    background-image: url("../img/old-paper.jpg");
-    background-repeat:  repeat;
-}
 
 .card {
     width: 100%;

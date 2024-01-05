@@ -1,7 +1,7 @@
 
 
 function initPrez() {
-    const prehistoire = new Prehistoire();
+    const oeil = new Oeil();
     const egypte = new Egypte();
     const mesopotamie = new Mesopotamie();
 

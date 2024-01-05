@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>L'astronomie à travers les âges</title>
+
+		<link rel="stylesheet" href="css/frise.css">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/serif.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<!-- JQuery -->
+		<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+		<link href="css/timeline.min.css" rel="stylesheet" />
+		<script src="js/timeline.js"></script>
+
+		<!-- Bootstrap v5.3.2 -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" >
+		<script src="js/bootstrap.bundle.min.js"></script>
+
+		<!-- Préhistoire -->
+		<script src="js/prehistoire.js"></script>
+		<link rel="stylesheet" href="css/prehistoire.css">
+
+		<!-- Egypte -->
+		<script src="js/egypte.js"></script>
+		<link rel="stylesheet" href="css/egypte.css">
+
+		<!-- Mésopotamie -->
+		<script src="js/mesopotamie.js"></script>
+		<link rel="stylesheet" href="css/mesopotamie.css">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<img src="img/intro.png" style="width: 800px;">
+					<img src="img/intro-gauche.png" style="width: 250px; position: absolute; top: -75px; left: -75px;">
+					<img src="img/intro-droite.png" style="width: 250px; position: absolute; top: -75px; right: -75px;">
+				</section>
+				<section>
+					<div class="timeline">
+						<div class="timeline__wrap">
+							<div class="timeline__items">
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<span>L’astronomie est l’une des plus anciennes sciences connues de l’humanité.
+						Les civilisations anciennes, telles que les Babyloniens, utilisaient l’astronomie pour suivre le temps et les saisons en observant les mouvements des planètes et des étoiles.
+						Au fil du temps, l’astronomie a évolué pour devenir une science complexe qui étudie les corps célestes et leur comportement dans l’univers.
+						L’étude de l’astronomie a permis aux scientifiques de découvrir des phénomènes tels que les trous noirs, les supernovas et les galaxies.
+						Aujourd’hui, l’astronomie continue d’être une science en constante évolution qui nous permet de mieux comprendre notre place dans l’univers.</span>
+						https://astronomes.com/histoire-astronomie/
+						<aside class="notes">
+							Shhh, these are your private notes 📝
+						  </aside>
+				</section>
+				<section class="prehistoire"></section>
+				<section class="egypte"></section>
+				<section class="mesopotamie"></section>
+				<section>
+					L'âge d'or de l'Islam
+					https://www.bbc.com/afrique/articles/ce9klpz577vo
+				</section>
+				<section>
+					Antiquité (Ptolémé, Hipparque, Erastothène, Thales de Millet)
+					https://fr.wikipedia.org/wiki/Histoire_de_l%27astronomie
+				</section>
+				<section>
+					Copernic
+				</section>
+				<section>
+					Tycho Brahé / Kepler
+				</section>
+				<section>
+					Galilé (lunette, vitesse de la lumière, procès) / Giordano Bruno
+				</section>
+				<section style="width: 1000px; height: 500px;">
+					<img class="" src="img/newton2.gif" style="position: absolute; top: 150px; left: 30px;">
+					<p>Newton (Télescope : lumière)</p>
+				</section>
+				<section>
+					Casssini (observatoire de Paris) / Rohmel vitesse de la lumière
+					Calcul des longitudes, castastrophe navale anglaise
+				</section>
+				<section>
+					Halley, Hershell (Uranus, une comète?), Messier
+				</section>
+				<section>
+					Observatoire de Paris: Urbain Le Verrier Neptune
+				</section>
+				<section>
+					Observatoire de Paris: calcul de la vitesse de lalumière par Hypolite Fizaut
+					pour calculer la distance Terre / Soleil
+					=> finalement on fige le calcul pour déduire le mètre
+				</section>
+				<section>
+					Hubble expension de l'univers
+				</section>
+				<section>
+					Einstein théorie de la relitivité restreinte et générale
+				</section>
+				<section>
+					Georges Lemaître, théorie du Big Bang
+				</section>
+				<section>
+					Planck: fond diffues cosmologique?
+				</section>
+				<section>
+					Mayor: Exoplanète, Corot (détourné pour opportunité), Kepler, Trappist, Hubble, Tess, JWST
+				</section>
+				<section>
+					Equation de Drake interactive (on a pu affiner des termes)
+				</section>
+			</div>
+		</div>
+
+		<img class ="logo" src="img/logo-gens-de-la-lune.png">
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="js/showTimeline.js"></script>
+		<script src="js/prez.js"></script>
+		
+		<script>
+			initTimeline();
+			initPrez();
+
+			/*var first=true;
+			setInterval(() => {
+				if (first) {
+					first=false;
+					initPrez();
+				}
+			}, 1000);*/
+
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+
+/*			setInterval(() => {
+	Reveal.layout();
+				if( location.href.split("#/").pop()=="1" ) {
+					$(".timeline").show();
+					$(".timeline").css("position","absolute");
+					$(".timeline").css("top","100px");
+					//$(".timeline").css("left","-300px");
+					//$(".timeline").css("transform","scale(0.8)");
+					initTimeline();
+				} else {
+					$(".timeline").hide();
+				}
+			}, 100);*/
+		</script>
+	</body>
+</html>

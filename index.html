@@ -4,10 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>L'astronomie à travers les âges</title>
+		<title>A l'observatoire les planètes sont nettes!</title>
 
-		<link rel="stylesheet" href="css/frise.css">
+		<!-- link rel="stylesheet" href="css/frise.css" -->
 
+		<link rel="stylesheet" href="css/prez.css">
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/serif.css">
@@ -17,16 +18,17 @@
 
 		<!-- JQuery -->
 		<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
-		<link href="css/timeline.min.css" rel="stylesheet" />
-		<script src="js/timeline.js"></script>
 
 		<!-- Bootstrap v5.3.2 -->
 		<link href="css/bootstrap.min.css" rel="stylesheet" >
 		<script src="js/bootstrap.bundle.min.js"></script>
 
-		<!-- Préhistoire -->
-		<script src="js/prehistoire.js"></script>
-		<link rel="stylesheet" href="css/prehistoire.css">
+		<!-- p5.js -->
+		<script src="js/p5.js"></script>
+
+		<!-- Oeil -->
+		<script src="js/oeil.js"></script>
+		<link rel="stylesheet" href="css/oeil.css">
 
 		<!-- Egypte -->
 		<script src="js/egypte.js"></script>
@@ -41,28 +43,12 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<img src="img/intro.png" style="width: 800px;">
-					<img src="img/intro-gauche.png" style="width: 250px; position: absolute; top: -75px; left: -75px;">
-					<img src="img/intro-droite.png" style="width: 250px; position: absolute; top: -75px; right: -75px;">
+					<h3>A l'observatoire les planètes sont nettes!</h3>
+					<h4>Une conférence sur les instruments optiques</h4>
+					<h4>l'Observatoire astronomique de la Pointe du Diable</h4>
+					<img src="img/All Sky.jpg" style="width: 800px;" class="rounded-pill img-fluid">
 				</section>
-				<section>
-					<div class="timeline">
-						<div class="timeline__wrap">
-							<div class="timeline__items">
-							</div>
-						</div>
-					</div>
-				</section>
-				<section>
-					<span>L’astronomie est l’une des plus anciennes sciences connues de l’humanité.
-						Les civilisations anciennes, telles que les Babyloniens, utilisaient l’astronomie pour suivre le temps et les saisons en observant les mouvements des planètes et des étoiles.
-						Au fil du temps, l’astronomie a évolué pour devenir une science complexe qui étudie les corps célestes et leur comportement dans l’univers.
-						L’étude de l’astronomie a permis aux scientifiques de découvrir des phénomènes tels que les trous noirs, les supernovas et les galaxies.
-						Aujourd’hui, l’astronomie continue d’être une science en constante évolution qui nous permet de mieux comprendre notre place dans l’univers.</span>
-						https://astronomes.com/histoire-astronomie/
-						<aside class="notes">
-							Shhh, these are your private notes 📝
-						  </aside>
+				<section class="oeil">
 				</section>
 				<section class="prehistoire"></section>
 				<section class="egypte"></section>
@@ -124,44 +110,18 @@
 			</div>
 		</div>
 
-		<img class ="logo" src="img/logo-gens-de-la-lune.png">
+		<img class ="logo" src="img/logo-gens-de-la-lune.png" style="left: 20px;">
+		<img class ="logo" src="img/Logo_IMT_Atlantique.svg" style="right: 150px; height: 90px;">
 
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
-		<script src="js/showTimeline.js"></script>
+		<!-- script src="js/showTimeline.js"></script -->
 		<script src="js/prez.js"></script>
 		
 		<script>
-			initTimeline();
 			initPrez();
-
-			/*var first=true;
-			setInterval(() => {
-				if (first) {
-					first=false;
-					initPrez();
-				}
-			}, 1000);*/
-
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-
-/*			setInterval(() => {
-	Reveal.layout();
-				if( location.href.split("#/").pop()=="1" ) {
-					$(".timeline").show();
-					$(".timeline").css("position","absolute");
-					$(".timeline").css("top","100px");
-					//$(".timeline").css("left","-300px");
-					//$(".timeline").css("transform","scale(0.8)");
-					initTimeline();
-				} else {
-					$(".timeline").hide();
-				}
-			}, 100);*/
 		</script>
 	</body>
 </html>

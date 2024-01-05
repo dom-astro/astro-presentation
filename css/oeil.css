@@ -1,0 +1,51 @@
+.figure-caption {
+    font-size: 14px !important;
+}
+
+.oeil {
+    text-align: left;
+}
+
+.oeil > section > .card {
+    position: relative;
+    top: -150px;
+}
+
+
+.oeil-intro>p>img {
+    position: relative;
+    left: 100px;
+    width: 800px;
+    top: -50px;
+}
+
+.oeil-img {
+    position: relative;
+    width: 800px;
+    right: 0px;
+}
+
+.oeil-fragment {
+    position: absolute;
+}
+
+.oeil-fragment>img {
+    position: absolute;
+    top: 150px;
+    left: 750px;
+    transform: scale(5);
+}
+
+.oeil-trajet>span {
+    position: relative;
+    top: -50px;
+}
+
+.oeil-iframe {
+    height:380px;
+    width:520px;
+    position: relative;
+    left: calc(100vh - 260px);
+    border-radius: 10px;
+    overflow: hidden;
+}
