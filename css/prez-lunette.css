@@ -1,0 +1,114 @@
+.figure-caption {
+    font-size: 14px !important;
+}
+
+.lunette {
+    text-align: left;
+}
+
+.lunette > section > .card {
+    position: relative;
+    top: -150px;
+}
+
+.lunette-fragment {
+    position: absolute;
+}
+
+/*.lunette-fragment>img {
+    position: absolute;
+    top: 100px;
+    left: 700px;
+    transform: scale(2);
+}*/
+
+.lunette-astro {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+.lunette-astro>img {
+    width: 500px;
+    height: 300px;
+}
+
+.lunette-galilee {
+    position: absolute;
+    top: 150px;
+    left: 650px;
+}
+
+.lunette-galilee>img {
+    width: 500px;
+    height: 300px;
+}
+
+.astro {
+    top: 100px !important;
+}
+
+.astro>span>p {
+    font-size: 28px;
+    position: absolute;
+    width: 50%;
+}
+
+.img-astro {
+    position: absolute;
+    left: 110%;
+    top:-10px;
+    max-width: unset !important;
+    max-height: unset !important;
+}
+/*
+.img-astro-objectif {
+    transform: scale(3);
+}
+
+.img-astro-focal {
+    transform: scale(2.5);
+}
+
+.img-astro-occulaire {
+    transform: scale(2);
+}
+*/
+/*
+.oeil-intro>p>img {
+    position: relative;
+    left: 100px;
+    width: 800px;
+    top: -50px;
+}
+
+.lunette-img {
+    position: relative;
+    width: 800px;
+    right: 0px;
+}
+
+.oeil-fragment {
+    position: absolute;
+}
+
+.oeil-fragment>img {
+    position: absolute;
+    top: 150px;
+    left: 750px;
+    transform: scale(5);
+}
+
+.oeil-trajet>span {
+    position: relative;
+    top: -50px;
+}
+
+.oeil-iframe {
+    height:375px;
+    width:600px;
+    position: relative;
+    left: calc(100vh - 350px);
+    border-radius: 10px;
+    overflow: hidden;
+}*/

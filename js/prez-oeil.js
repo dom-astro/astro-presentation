@@ -21,7 +21,7 @@ class Oeil {
 
         $(this.class).append("\
         <section class='oeil-intro'>\
-            <span>L'œil un système optique simple composé de:</p>\
+            <span>L'œil un système optique simple composé de:\
             <p class='fragment fade-in-then-out oeil-fragment'>\
                     <span>- la cornée</span><br>\
                     <span></span><br>\
@@ -50,6 +50,7 @@ class Oeil {
                     <span>- la rétine</span><br>\
                     <img src='img/retine.svg' class='oeil-img'>\
                 </p>\
+                </span>\
         </section>"
         );
 
@@ -57,12 +58,12 @@ class Oeil {
         ");
     }
 
-    /* Introduction */
+    /* Trajet de la lumière */
     trajet() {
         $(this.class).append("\
         <section class='oeil-trajet'>\
             <span>La lumière traverse deux lentilles convergentes pour se focaliser sur la rétine:</p>\
-            <iframe class='oeil-iframe' src='Lentille\\oeil.html' style='' title='Trajet de la lumière dans l'oeil'></iframe>\
+            <iframe class='oeil-iframe' src='oeil.html' style='' title='Trajet de la lumière dans l'oeil'></iframe>\
         </section>"
         );       
     }

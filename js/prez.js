@@ -2,8 +2,8 @@
 
 function initPrez() {
     const oeil = new Oeil();
-    const egypte = new Egypte();
-    const mesopotamie = new Mesopotamie();
+    const lunette = new Lunette();
+    //const cassegrain = new Cassegrain();
 
     Reveal.initialize({
         hash: true,
