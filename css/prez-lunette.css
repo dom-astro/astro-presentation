@@ -61,6 +61,22 @@
     max-width: unset !important;
     max-height: unset !important;
 }
+
+.trajet-astro {
+    top: 75px !important;
+    left: 100px;
+}
+
+#astro-iframe {
+    height: 300px;
+    width: 500px;
+    position: relative;
+    left: calc(50vh - 160px);
+    top: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+    transform: scale(1);
+}
 /*
 .img-astro-objectif {
     transform: scale(3);

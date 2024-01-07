@@ -156,7 +156,6 @@ function draw() {
     if (isCornee && isIris && isCristallin && isRetine) {
         isFin=true;
     }
-
   }
     //print('x: '+path1.x+", y1: "+path1.y+", y2: "+path2.y);
 }

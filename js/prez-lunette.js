@@ -78,10 +78,9 @@ class Lunette {
             </span>\
         </section>"
         );       
-
     }
 
-    /* Introduction */
+    /* Trajet */
     trajet() {
         $(this.class).append("\
         <section class='oeil-trajet'>\
@@ -90,10 +89,69 @@ class Lunette {
         </section>"
         );       
     }
+    
+    /* Lunette Galilée */
+    galilee() {
+        $(this.class).append("\
+        <section class='astro'>\
+            <span>Une lunette astronomique est constituée de deux lentilles<br><br>\
+                <p class='fragment fade-in-then-out'>\
+                    <span>- Une première lentille en entrée de l'instrument (l'objectif), qui capte la lumière.</span><br><br>\
+                    <span></span><br><br>\
+                    <span></span><br><br>\
+                    <span></span><br><br>\
+                    <img src='img/lunette-objectif.png' class='rounded img-astro img-astro-objectif' alt='Objectif de la lunette'>\
+                <p class='fragment fade-in-then-out'>\
+                    <span>- Une première lentille en entrée de l'instrument (l'objectif), qui capte la lumière.</span><br><br>\
+                    <span>- Puis la focalise dans la lunette.</span><br><br>\
+                    <span></span><br><br>\
+                    <span></span><br><br>\
+                    <img src='img/lunette-focal.png' class='rounded img-astro img-astro-focal' alt='Point focal de la lunette'>\
+                </p>\
+                <p class='fragment fade-in-then-out'>\
+                    <span>- Une première lentille en entrée de l'instrument (l'objectif), qui capte la lumière.</span><br><br>\
+                    <span>- Puis la focalise dans la lunette.</span><br><br>\
+                    <span>- Une seconde lentille qui redresse l'image afin d'en faciliter son observation à l'oeil.</span><br><br>\
+                    <span></span><br><br>\
+                    <img src='img/lunette-occulaire.png' class='rounded img-astro img-astro-occulaire' alt='Occulaire de la lunette'>\
+                </p>\
+                <p class='fragment fade-in-then-out'>\
+                    <span>- Une première lentille en entrée de l'instrument (l'objectif), qui capte la lumière.</span><br><br>\
+                    <span>- Puis la focalise dans la lunette.</span><br><br>\
+                    <span>- Une seconde lentille qui redresse l'image afin d'en faciliter son observation à l'oeil.</span><br><br>\
+                    <span>- Dans le cas d'une lunette astronomique, les deux lentilles sont convergentes, et l'image est inversée.</span><br><br>\
+                    <img src='img/lunette-result.png' class='rounded img-astro img-astro-occulaire' alt='Occulaire de la lunette'>\
+                </p>\
+            </span>\
+        </section>"
+        );       
+
+    }
+    
+    /* Trajet */
+    astro_trajet() {
+        $(this.class).append("\
+        <section class='trajet-astro'>\
+            <span>Calculons le grossissement de la lunette astronomique</p>\
+            <iframe id='astro-iframe' src='lunette.html' style='' title='Trajet de la lumière dans une lunette astronomique'></iframe>\
+        </section>"
+        );
+        //https://www.maxicours.com/se/cours/etudier-une-lunette-afocale/#:~:text=Le%20grossissement%20de%20la%20lunette,sur%20celui%20de%20l%27oculaire.
+        $("body ").click(function() {
+            let scale=$("#astro-iframe").css("transform");
+
+            if(scale=="matrix(1, 0, 0, 1, 0, 0)") {
+                $("#astro-iframe").css("transform", "scale(2.1)");
+            } else {
+                $("#astro-iframe").css("transform", "scale(1)");
+            }
+        });
+    }
 
     write() {
         this.intro();
         this.astro();
+        this.astro_trajet();
         //this.trajet();
     }
 }

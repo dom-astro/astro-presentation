@@ -1,3 +1,59 @@
 body {
     overflow: hidden;
 }
+
+.point {
+    z-index: 99;
+    position: absolute;
+    display: none;
+}
+
+#point-a {
+    top: 25px;
+}
+
+#point-b {
+    top: 100px;
+}
+
+#point-a2 {
+    left: 252px;
+    top: 155px;
+}
+
+#point-b2 {
+    left: 252px;
+    top: 65px;
+}
+
+#point-a3 {
+    left: 375px;
+    top: 40px;
+}
+
+#point-b3 {
+    left: 375px;
+    top: 100px;
+}
+
+#angle-alpha {
+    left: 163px;
+    top: 93px;
+}
+
+#angle-alpha2 {
+    left: 285px;
+    top: 95px;
+}
+
+
+.p5Canvas {
+    position: absolute;
+    top: 0px;
+}
+
+.info {
+    position: absolute;
+    bottom: -16px;
+    width: 100%;
+}
