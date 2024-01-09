@@ -5,7 +5,7 @@ var isStop, isObjectif, isFocal, isOcculaire, isFin, isImage;
 
 function setup() {
     // Création du canvas
-    canvasAstro=createCanvas(400, 200);
+    canvasAstro=createCanvas(400, 180);
 
     //start ellipse at middle top of screen
     position = createVector(0, 50);
@@ -63,11 +63,12 @@ function draw() {
 
     if (mouseIsPressed && !isStop) {
         if (isFin) {
-            $("#image").hide();
+            /*$("#image").hide();
             $(".point").hide();
      
             canvasAstro.remove();
-            setup();
+            setup();*/
+            isStop=true;
         }
         
         // move ellipse
@@ -92,7 +93,7 @@ function draw() {
                 $("#objectif").hide();
                 $("#objectif").append("\
                 <div class='alert alert-info alert-dismissible' role='alert'>\
-                    <div>La lumi&egrave;re est d&eacute;vi&eacute;e par la premi&egrave;re lentille convergente. Soit &alpha; l'angle de d&eacute;viation</div>\
+                    <div>La lumi&egrave;re est d&eacute;vi&eacute;e par la premi&egrave;re lentille convergente. L'objet est vu sous l'angle &alpha;</div>\
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
                 </div>");
                 $("#objectif").show(500);
@@ -110,6 +111,9 @@ function draw() {
             line(250,100,250,150);
             $("#point-a2").show();
             $("#point-b2").show();
+            $("#f1").show();
+            $("#f2").show();
+            
             if(!isFocal) {
                 isStop=true;
                 isFocal=true;
@@ -118,7 +122,9 @@ function draw() {
                 $("#focal").hide();
                 $("#focal").append("\
                 <div class='alert alert-info alert-dismissible' role='alert'>\
-                    <div>Le point focal de la premi&egrave;re lentielle se confond avec le point focal de la seconde lentille. C'est un syst&egrave;me afocal.</div>\
+                    <div>Le point focal de la premi&egrave;re lentille se confond avec le point focal de la seconde lentille. C'est un syst&egrave;me afocal.\
+                    Soit F1 la premi&egrave;re distance focale et F2 la seconde.\
+                    </div>\
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
                 </div>");
                 $("#focal").show(500);
@@ -159,7 +165,7 @@ function draw() {
                 $("#image").hide();
                 $("#image").append("\
                 <div class='alert alert-info alert-dismissible' role='alert'>\
-                    <div>L'image se reforme &agrave; l'infini en A''B''.</div>\
+                    <div>L'image se reforme &agrave; l'infini en A''B'' et l'objet est vu sous l'angle &alpha;'.</div>\
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
                 </div>");
                 $("#image").show(500);
@@ -167,6 +173,10 @@ function draw() {
         }
 
         if (position.x>width) {
+            position.add(-1, 0.4);
+            position2.add(-1, -0.4);
+            position3.add(-1, -0.4);
+
             isStop=true;
             position.x=0;
             position.y=50;

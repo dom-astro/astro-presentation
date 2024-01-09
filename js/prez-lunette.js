@@ -138,6 +138,39 @@ class Lunette {
               <path d='M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5M.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5'/>\
             </svg>\
             <span style='font-size: 12px;'>*Cliquer sur le schéma!</span>\
+            <p class='fragment fade-in'><span style='font-size: 16px; top:-30px; position: relative;'>Le grossissement G vaut le rapport entre les deux angles &alpha;'/&alpha;</span></p>\
+            <p class='fragment fade-in'><span style='font-size: 16px; top:-60px; position: relative;'>On remarque deux triangles rectangle en B'. Avec un peu de connaissance en trigonométrie, on sait que tan(&alpha;)=B'A'/F<sub>1</sub> et tan(&alpha;')=B'A'/F<sub>2</sub>\
+            <p class='fragment fade-in'><span style='font-size: 16px; top:-90px; position: relative;'>Comme les angles sont très petits, on a tan(&alpha;)=&alpha; et tan(&alpha;')=&alpha;'</span></p>\
+            <p class='fragment fade-in'><span style='font-size: 16px; top:-120px; position: relative;'>On en déduit que G=&alpha;/&alpha;, soit G=tan(&alpha;')/tan(&alpha;), soit G=<b>F<sub>2</sub>/F<sub>1</sub></b></span></p>\
+        </span>\
+       </section>"
+        );
+        //https://www.maxicours.com/se/cours/etudier-une-lunette-afocale/#:~:text=Le%20grossissement%20de%20la%20lunette,sur%20celui%20de%20l%27oculaire.
+        $("#astro-zoom ").click(function() {
+            let scale=$("#astro-iframe").css("transform");
+
+            if(scale=="matrix(1, 0, 0, 1, 0, 0)") {
+                $("#astro-iframe").css("transform", "scale(2)");
+                $("#astro-iframe").css("left", "250px");
+                $("#astro-iframe").css("top", "150px");
+            } else {
+                $("#astro-iframe").css("transform", "scale(1)");
+                $("#astro-iframe").css("left", "0px");
+                $("#astro-iframe").css("top", "0px");
+            }
+        });
+    }
+
+    /* Trajet */
+    astro_grossiement() {
+        $(this.class).append("\
+        <section class='trajet-astro'>\
+            <span>Calculons le grossissement de la lunette astronomique</p>\
+            <iframe id='astro-iframe' src='lunette.html' style='' title='Trajet de la lumière dans une lunette astronomique'></iframe>\
+            <svg id='astro-zoom' style='position: absolute; left: -25px; top: 75px;' width='16' height='16' fill='currentColor' class='bi bi-fullscreen' viewBox='0 0 16 16'>\
+              <path d='M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5M.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5'/>\
+            </svg>\
+            <span style='font-size: 12px;'>*Cliquer sur le schéma!</span>\
        </section>"
         );
         //https://www.maxicours.com/se/cours/etudier-une-lunette-afocale/#:~:text=Le%20grossissement%20de%20la%20lunette,sur%20celui%20de%20l%27oculaire.

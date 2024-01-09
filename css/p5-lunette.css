@@ -57,3 +57,13 @@ body {
     bottom: -16px;
     width: 100%;
 }
+
+#f1 {
+    left: 170px;
+    top: 75px;
+}
+
+#f2 {
+    left: 282px;
+    top: 75px;
+}
