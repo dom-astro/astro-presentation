@@ -71,8 +71,8 @@
     height: 300px;
     width: 500px;
     position: relative;
-    left: calc(50vh - 160px);
-    top: 25px;
+    left: 0px;
+    /*top: 25px;*/
     border-radius: 8px;
     overflow: hidden;
     transform: scale(1);

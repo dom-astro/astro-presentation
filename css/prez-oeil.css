@@ -45,7 +45,7 @@
     height:375px;
     width:600px;
     position: relative;
-    left: calc(100vh - 350px);
+    left: 350px;
     border-radius: 10px;
     overflow: hidden;
 }
