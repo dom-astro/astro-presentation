@@ -36,16 +36,23 @@
     transform: scale(5);
 }
 
+.oeil-trajet {
+    top: 75px !important;
+    left: 100px;
+}
+
 .oeil-trajet>span {
     position: relative;
     top: -50px;
 }
 
-.oeil-iframe {
-    height:375px;
-    width:600px;
-    position: relative;
-    left: 350px;
-    border-radius: 10px;
-    overflow: hidden;
+#oeil-iframe {
+        height: 381px;
+        width: 500px;
+        position: relative;
+        left: 0px;
+        /*top: 25px;*/
+        border-radius: 8px;
+        overflow: hidden;
+        transform: scale(1);
 }
