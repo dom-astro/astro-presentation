@@ -77,3 +77,14 @@
     overflow: hidden;
     transform: scale(1);
 }
+
+#galilee-iframe {
+    height: 300px;
+    width: 500px;
+    position: relative;
+    left: 0px;
+    top: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+    transform: scale(1);
+}

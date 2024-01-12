@@ -10,11 +10,13 @@ function setup() {
     //start ellipse at middle top of screen
     position = createVector(0, 50);
     position2 = createVector(0, 150);
-    position3 = createVector(0, 50);
-
+    pos3 = createVector(285, 82);
+    pos4 = createVector(285, 118);
+    pos5 = createVector(285, 82);
+    pos6 = createVector(285, 118);
   
     objectif=createVector(init.x, 100);
-    occulaire=createVector(init.x+200, 100);
+    occulaire=createVector(init.x+150, 100);
 
     // init stop
     isStop=false;
@@ -38,7 +40,10 @@ function draw() {
     fill('orange');
     ellipse(position.x, position.y, 2, 2);
     ellipse(position2.x, position2.y, 2, 2);
-    ellipse(position3.x, position3.y, 2, 2);
+    ellipse(pos3.x, pos3.y, 1, 1);
+    ellipse(pos4.x, pos4.y, 1, 1);
+    ellipse(pos5.x, pos5.y, 1, 1);
+    ellipse(pos6.x, pos6.y, 1, 1);
 
     // Draw line
     stroke('black');
@@ -59,16 +64,10 @@ function draw() {
     arc(occulaire.x+21, occulaire.y, 20, 80,   PI / 2 + 0.2, - PI / 2 - 0.2);
     arc(occulaire.x+22, occulaire.y, 20, 80,   PI / 2 + 0.2, - PI / 2 - 0.2);
     stroke("lightblue");
-    line(occulaire.x+9, occulaire.y-31,occulaire.x+13, occulaire.y-31);
-    line(occulaire.x+9, occulaire.y-30,occulaire.x+13, occulaire.y-30);
-    line(occulaire.x+9, occulaire.y-29,occulaire.x+13, occulaire.y-29);
-    line(occulaire.x+10, occulaire.y-28,occulaire.x+13, occulaire.y-28);
-    line(occulaire.x+10, occulaire.y-27,occulaire.x+13, occulaire.y-27);
-    line(occulaire.x+10, occulaire.y-26,occulaire.x+13, occulaire.y-26);
-    line(occulaire.x+9, occulaire.y-25,occulaire.x+12, occulaire.y-25);
-    line(occulaire.x+9, occulaire.y-24,occulaire.x+12, occulaire.y-24);
-
-
+    for (let i=23;i<32;i++) {
+        line(occulaire.x+9, occulaire.y-i,occulaire.x+13, occulaire.y-i);
+        line(occulaire.x+9, occulaire.y+i,occulaire.x+13, occulaire.y+i);
+    }
 
     if (mouseIsPressed && !isStop) {
         if (isFin) {
@@ -83,18 +82,11 @@ function draw() {
         // move ellipse
         position.add(2, 0);
         position2.add(2, 0);
-        position3.add(2, 0.8);
-
-        // Draw AB
-        stroke('black');
-        line(0,50,0,100);
-        $("#point-a").show();
-        $("#point-b").show();
 
         if (position.x>125) {
-            position.add(-1, 0.4);
-            position2.add(-1, -0.4);
-            position3.add(-1, -0.4);
+            position.add(-1, 0.2);
+            position2.add(-1, -0.2);
+        
             if(!isObjectif) {
                 isStop=true;
                 isObjectif=true;
@@ -102,45 +94,44 @@ function draw() {
                 $("#objectif").hide();
                 $("#objectif").append("\
                 <div class='alert alert-info alert-dismissible' role='alert'>\
-                    <div>La lumi&egrave;re est d&eacute;vi&eacute;e par la premi&egrave;re objectif convergente. L'objet est vu sous l'angle &alpha;</div>\
+                    <div>La lumi&egrave;re est d&eacute;vi&eacute;e par la premi&egrave;re lentille qui est convergente.</div>\
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
                 </div>");
                 $("#objectif").show(500);
             }
-
-            // Draw alpha
-            fill('yellow');
-            arc(130, 100, 50, 50, 0, 0.4);
-            $("#angle-alpha").show();
         }
 
-        if (position.x>249) {
-            position3.add(0, -1.05);
-            stroke("black");
-            line(250,100,250,150);
-            $("#point-a2").show();
-            $("#point-b2").show();
-            $("#f1").show();
-            $("#f2").show();
+        if (position.x>285) {
+            position.add(0, -0.2);
+            position2.add(0, 0.2);
+            pos3.add(-1,0.4);
+            pos4.add(-1,-0.4);
+            pos5.add(1,0.2);
+            pos6.add(1,-0.2);
             
-            if(!isFocal) {
+            if(pos3.x<240) {
+                stroke("black");
+                line(240,90,240,110);
+                pos3.add(1,-0.4);
+                pos4.add(1,0.4);
+            }
+            if(!isOcculaire) {
                 isStop=true;
-                isFocal=true;
+                isOcculaire=true;
                 $("#objectif").hide(1000);
-                $("#focal").empty();
-                $("#focal").hide();
-                $("#focal").append("\
+                $("#occulaire").empty();
+                $("#occulaire").hide();
+                $("#occulaire").append("\
                 <div class='alert alert-info alert-dismissible' role='alert'>\
-                    <div>Le point focal de la premi&egrave;re objectif se confond avec le point focal de la seconde objectif. C'est un syst&egrave;me afocal.\
-                    Soit F1 la premi&egrave;re distance focale et F2 la seconde.\
+                    <div>La seconde lentille, qui est divergente, redresse la lumi&egrave;re.\
                     </div>\
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
                 </div>");
-                $("#focal").show(500);
+                $("#occulaire").show(500);
             }
         }
 
-        if(position.x>325) {
+        /*if(position.x>325) {
             position.add(0, -0.4);
             position2.add(0, 0.4);
             if(!isOcculaire) {
@@ -156,17 +147,14 @@ function draw() {
                 </div>");
                 $("#occulaire").show(500);
             }
-            // Draw alpha'
-            fill('yellow');
-            arc(325, 100, 50, 50, PI-0.55, PI);
-            $("#angle-alpha2").show();
-        }
+        }*/
 
         if(position.x>372) {
-            stroke("black");
-            line(372,70,372,100);
-            $("#point-a3").show();
-            $("#point-b3").show();
+            // Draw focale
+            line(372,90,372,110);
+            pos5.add(1,-0.2);
+            pos6.add(1,0.2);
+    
             if(!isImage) {
                 isImage=true;
                 $("#occulaire").hide(1000);
@@ -174,7 +162,7 @@ function draw() {
                 $("#image").hide();
                 $("#image").append("\
                 <div class='alert alert-info alert-dismissible' role='alert'>\
-                    <div>L'image se reforme &agrave; l'infini en A''B'' et l'objet est vu sous l'angle &alpha;'.</div>\
+                    <div>L'image se reforme &agrave; au foyer qui est &agrave; l'int&eacute;rieur du la lunette. On obtient une image virtuelle.</div>\
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
                 </div>");
                 $("#image").show(500);
@@ -184,15 +172,12 @@ function draw() {
         if (position.x>width) {
             position.add(-1, 0.4);
             position2.add(-1, -0.4);
-            position3.add(-1, -0.4);
 
             isStop=true;
             position.x=0;
             position.y=50;
             position2.x=0;
             position2.y=150;
-            position3.x=0;
-            position3.y=50;
         }
 
   }

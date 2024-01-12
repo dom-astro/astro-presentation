@@ -153,38 +153,34 @@ class Lunette {
     /* Lunette Galilée */
     galilee() {
         $(this.class).append("\
-        <section class='astro'>\
-            <span>la lunette de Galilée comporte une variante. Elle est constituée d'une lenteille divergente à l'occulaire<br><br>\
-                <p class='fragment fade-in-then-out'>\
-                    <span>- Une première lentille en entrée de l'instrument (l'objectif), qui capte la lumière.</span><br><br>\
-                    <span></span><br><br>\
-                    <span></span><br><br>\
-                    <span></span><br><br>\
-                    <img src='img/lunette-objectif.png' class='rounded img-astro img-astro-objectif' alt='Objectif de la lunette'>\
-                <p class='fragment fade-in-then-out'>\
-                    <span>- Une première lentille en entrée de l'instrument (l'objectif), qui capte la lumière.</span><br><br>\
-                    <span>- Puis la focalise dans la lunette.</span><br><br>\
-                    <span></span><br><br>\
-                    <span></span><br><br>\
-                    <img src='img/lunette-focal.png' class='rounded img-astro img-astro-focal' alt='Point focal de la lunette'>\
-                </p>\
-                <p class='fragment fade-in-then-out'>\
-                    <span>- Une première lentille en entrée de l'instrument (l'objectif), qui capte la lumière.</span><br><br>\
-                    <span>- Puis la focalise dans la lunette.</span><br><br>\
-                    <span>- Une seconde lentille qui redresse l'image afin d'en faciliter son observation à l'oeil.</span><br><br>\
-                    <span></span><br><br>\
-                    <img src='img/lunette-occulaire.png' class='rounded img-astro img-astro-occulaire' alt='Occulaire de la lunette'>\
-                </p>\
-                <p class='fragment fade-in-then-out'>\
-                    <span>- Une première lentille en entrée de l'instrument (l'objectif), qui capte la lumière.</span><br><br>\
-                    <span>- Puis la focalise dans la lunette.</span><br><br>\
-                    <span>- Une seconde lentille qui redresse l'image afin d'en faciliter son observation à l'oeil.</span><br><br>\
-                    <span>- Dans le cas d'une lunette astronomique, les deux lentilles sont convergentes, et l'image est inversée.</span><br><br>\
-                    <img src='img/lunette-result.png' class='rounded img-astro img-astro-occulaire' alt='Occulaire de la lunette'>\
-                </p>\
-            </span>\
-        </section>"
-        );       
+            <section class='trajet-astro'>\
+                <span>La lunette de galilée est aussi constituée de deux lentilles. Cependant la seconde est une lentille divergente.</span>\
+                <br>\
+                <iframe id='galilee-iframe' src='galilee.html' title='Trajet de la lumière dans une lunette astronomique'></iframe>\
+                <svg id='galilee-zoom' style='position: absolute; left: -25px; top: 130px;' width='16' height='16' fill='currentColor' class='bi bi-fullscreen' viewBox='0 0 16 16'>\
+                <path d='M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5M.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5'/>\
+                </svg>\
+                <span style='font-size: 12px;'>*Cliquer sur le schéma!</span>\
+                <p class='fragment fade-in'><span style='font-size: 16px; top:-30px; position: relative;'>Le grossissement G vaut le rapport entre les deux angles &alpha;'/&alpha;</span></p>\
+                <p class='fragment fade-in'><span style='font-size: 16px; top:-60px; position: relative;'>On remarque deux triangles rectangle en B'. Avec un peu de connaissance en trigonométrie, on sait que tan(&alpha;)=B'A'/F<sub>1</sub> et tan(&alpha;')=B'A'/F<sub>2</sub>\
+                <p class='fragment fade-in'><span style='font-size: 16px; top:-90px; position: relative;'>Comme les angles sont très petits, on a tan(&alpha;)=&alpha; et tan(&alpha;')=&alpha;'</span></p>\
+                <p class='fragment fade-in'><span style='font-size: 16px; top:-120px; position: relative;'>On en déduit que G=&alpha;/&alpha;, soit G=tan(&alpha;')/tan(&alpha;), soit G=<b>F<sub>2</sub>/F<sub>1</sub></b></span></p>\
+            </section>"
+        );
+
+        $("#galilee-zoom ").click(function() {
+            let scale=$("#galilee-iframe").css("transform");
+
+            if(scale=="matrix(1, 0, 0, 1, 0, 0)") {
+                $("#galilee-iframe").css("transform", "scale(2)");
+                $("#galilee-iframe").css("left", "250px");
+                $("#galilee-iframe").css("top", "175px");
+            } else {
+                $("#galilee-iframe").css("transform", "scale(1)");
+                $("#galilee-iframe").css("left", "0px");
+                $("#galilee-iframe").css("top", "25px");
+            }
+        });
 
     }
 
@@ -195,6 +191,7 @@ class Lunette {
         this.astro();
         this.astroTrajet();
         this.introGalilee();
+        this.galilee();
         //this.trajet();
     }
 }
