@@ -94,7 +94,7 @@ function draw() {
                 $("#objectif").hide();
                 $("#objectif").append("\
                 <div class='alert alert-info alert-dismissible' role='alert'>\
-                    <div>La lumi&egrave;re est d&eacute;vi&eacute;e par la premi&egrave;re lentille qui est convergente.</div>\
+                    <div>La lumi&egrave;re est d&eacute;vi&eacute;e par la premi&egrave;re lentille (l'objectif) qui est convergente.</div>\
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
                 </div>");
                 $("#objectif").show(500);
@@ -123,7 +123,7 @@ function draw() {
                 $("#occulaire").hide();
                 $("#occulaire").append("\
                 <div class='alert alert-info alert-dismissible' role='alert'>\
-                    <div>La seconde lentille, qui est divergente, redresse la lumi&egrave;re.\
+                    <div>La seconde lentille (l'occulaire) est divergente et redresse la lumi&egrave;re.\
                     </div>\
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
                 </div>");

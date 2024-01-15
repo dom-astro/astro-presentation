@@ -2,11 +2,21 @@
     font-size: 14px !important;
 }
 
-.lunette {
+.lunette, .lunette-2, .lunette-3 {
     text-align: left;
 }
 
 .lunette > section > .card {
+    position: relative;
+    top: -150px;
+}
+
+.lunette-2 > section > .card {
+    position: relative;
+    top: -150px;
+}
+
+.lunette-3 > section > .card {
     position: relative;
     top: -150px;
 }

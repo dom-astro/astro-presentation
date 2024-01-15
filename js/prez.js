@@ -3,6 +3,8 @@
 function initPrez() {
     const oeil = new Oeil();
     const lunette = new Lunette();
+    const lunette2 = new Lunette2();
+    const lunette3 = new Lunette3();
     //const cassegrain = new Cassegrain();
 
     Reveal.initialize({

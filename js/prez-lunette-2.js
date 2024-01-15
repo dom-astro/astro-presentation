@@ -1,6 +1,6 @@
-class Lunette {
+class Lunette2 {
     constructor() {
-        this.class=".lunette";
+        this.class=".lunette-2";
         this.references=
             ["Reconstruction de la lunette de Galilée qui fêta son 400e anniversaire en 2009. Document <a href='http://www.jimsugar.com/'>Jim Sugar</a>"
             ,"Observatoire de Paris-Meudon - B. Mollier"
@@ -186,6 +186,8 @@ class Lunette {
 
 
     write() {
-        this.intro();
+        this.introAstro();
+        this.astro();
+        this.astroTrajet();
     }
 }

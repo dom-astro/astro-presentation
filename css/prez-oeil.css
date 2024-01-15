@@ -56,3 +56,13 @@
         overflow: hidden;
         transform: scale(1);
 }
+
+.oeil-fig-ref {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: lighter;
+    position: absolute;
+    width: 300px;
+    top: 450px;
+    left: 600px;
+}

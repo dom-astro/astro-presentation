@@ -28,6 +28,7 @@ class Oeil {
                     <span></span><br>\
                     <span></span><br>\
                     <img src='img/cornee.svg' class='oeil-img'>\
+                    <span class='oeil-fig-ref'>Modèle optique de l'œil (source wikipedia)</span>\
                 </p>\
                 <p class='fragment fade-in-then-out oeil-fragment'>\
                     <span>- la cornée</span><br>\
@@ -35,6 +36,7 @@ class Oeil {
                     <span></span><br>\
                     <span></span><br>\
                     <img src='img/iris.svg' class='oeil-img'>\
+                    <span class='oeil-fig-ref'>Modèle optique de l'œil (source wikipedia)</span>\
                 </p>\
                 <p class='fragment fade-in-then-out oeil-fragment'>\
                     <span>- la cornée</span><br>\
@@ -42,6 +44,7 @@ class Oeil {
                     <span>- le critallin</span><br>\
                     <span></span><br>\
                     <img src='img/cristallin.svg' class='oeil-img'>\
+                    <span class='oeil-fig-ref'>Modèle optique de l'œil (source wikipedia)</span>\
                 </p>\
                 <p class='fragment fade-in-then-out oeil-fragment'>\
                     <span>- la cornée</span><br>\
@@ -49,6 +52,7 @@ class Oeil {
                     <span>- le critallin</span><br>\
                     <span>- la rétine</span><br>\
                     <img src='img/retine.svg' class='oeil-img'>\
+                    <span class='oeil-fig-ref'>Modèle optique de l'œil (source wikipedia)</span>\
                 </p>\
                 </span>\
         </section>"
