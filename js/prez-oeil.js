@@ -66,12 +66,21 @@ class Oeil {
     trajet() {
         $(this.class).append("\
         <section class='oeil-trajet'>\
-            <p>La lumière traverse deux lentilles convergentes pour se focaliser sur la rétine</p>\
+            <p>Etudions le trajet de la lumière dans le système optique de l'oeil de la cornée jusqu'à la rétine</p>\
             <iframe id='oeil-iframe' src='oeil.html' style='' title='Trajet de la lumière dans l'oeil'></iframe>\
             <svg id='oeil-zoom' style='position: absolute; left: -25px; top: 145px;' width='16' height='16' fill='currentColor' class='bi bi-fullscreen' viewBox='0 0 16 16'>\
               <path d='M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5M.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5'/>\
             </svg>\
-            <p style='font-size: 12px;'>*Cliquer sur le schéma!</p>\
+            <p style='font-size: 12px; position: relative; bottom: 20px;'>*Cliquer sur le schéma!</p>\
+            <p class='fragment fade-in oeil-tech' style='top: 115px;'>\
+                <span>A partir de cette étude, l'astronome utilise deux techniques pour optimiser son observation:</<span>\
+            </p>\
+            <p class='fragment fade-in oeil-tech' style='top: 215px;'>\
+                <span>1 - il se met dans l'obscurité</<span>\
+            </p>\
+            <p class='fragment fade-in oeil-tech' style='top: 275px;'>\
+                <span>2 - il regarde une zone obscure légèrement à coté de l'objet visé</<span>\
+            </p>\
         </section>"
         );
 
