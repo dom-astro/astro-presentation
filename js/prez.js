@@ -5,7 +5,10 @@ function initPrez() {
     const lunette = new Lunette();
     const lunette2 = new Lunette2();
     const lunette3 = new Lunette3();
-    //const cassegrain = new Cassegrain();
+    const telescope = new Telescope();
+    const newton = new Newton();
+    const cassegrain = new Cassegrain();
+    const schmidtCassegrain = new SchmidtCassegrain();
 
     Reveal.initialize({
         hash: true,

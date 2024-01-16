@@ -1,0 +1,15 @@
+.figure-caption {
+    font-size: 14px !important;
+}
+
+.schmidt-intro {
+    text-align: left;
+    font-size: 30px;
+}
+
+.schmidt-figure {
+    font-style: italic;
+    font-size: 16px;
+    position: absolute;
+    bottom: 0px;
+}
