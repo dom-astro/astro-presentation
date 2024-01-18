@@ -128,7 +128,7 @@ function draw() {
                 $("#cristallin").append("\
                 <div class='alert alert-info alert-dismissible' role='alert'>\
                     <div>Le cristallin fait office de seconde lentille, mais cette fois-ci elle est biconvexe et la courbure\
-                         peut-etre modif&eacute;.</div>\
+                         peut-etre modif&eacute;e.</div>\
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
                 </div>");
             }

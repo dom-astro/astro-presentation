@@ -66,3 +66,9 @@
     top: 450px;
     left: 600px;
 }
+
+.oeil-tech {
+    position: absolute;
+    font-size: 28px;
+    left: 550px;
+}
