@@ -164,7 +164,7 @@ class Lunette {
                 <p class='fragment fade-in'><span style='font-size: 16px; top:-30px; position: relative;'>Le grossissement G vaut le rapport entre les deux angles &alpha;'/&alpha;</span></p>\
                 <p class='fragment fade-in'><span style='font-size: 16px; top:-60px; position: relative;'>On remarque deux triangles rectangle en B'. Avec un peu de connaissance en trigonométrie, on sait que tan(&alpha;)=B'A'/F<sub>1</sub> et tan(&alpha;')=B'A'/F<sub>2</sub>\
                 <p class='fragment fade-in'><span style='font-size: 16px; top:-90px; position: relative;'>Comme les angles sont très petits, on a tan(&alpha;)=&alpha; et tan(&alpha;')=&alpha;'</span></p>\
-                <p class='fragment fade-in'><span style='font-size: 16px; top:-120px; position: relative;'>On en déduit que G=&alpha;/&alpha;, soit G=tan(&alpha;')/tan(&alpha;), soit G=<b>F<sub>2</sub>/F<sub>1</sub></b></span></p>\
+                <p class='fragment fade-in'><span style='font-size: 16px; top:-120px; position: relative;'>On en déduit que G=&alpha;/&alpha;, soit G=tan(&alpha;')/tan(&alpha;), soit G=<b>F<sub>1</sub>/F<sub>2</sub></b></span></p>\
             </section>"
         );
 

@@ -1,3 +1,7 @@
+.newton {
+    text-align: left;
+}
+
 .figure-caption {
     font-size: 14px !important;
 }
@@ -12,6 +16,22 @@
     font-size: 16px;
     position: absolute;
     bottom: 0px;
+}
+
+.newton-trajet {
+    top: 75px !important;
+    left: 100px;
+}
+
+#newton-iframe {
+    height: 300px;
+    width: 500px;
+    position: relative;
+    left: 0px;
+    /*top: 25px;*/
+    border-radius: 8px;
+    overflow: hidden;
+    transform: scale(1);
 }
 
 /*

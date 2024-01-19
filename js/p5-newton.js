@@ -16,14 +16,15 @@ function setup() {
     position6 = createVector(170, 119);
   
     objectif=createVector(init.x, init.y);
-    occulaire=createVector(init.x+150, init.y);
+    occulaire=createVector(149, 0);
 
     // init stop
     isStop=false;
     isObjectif=false;
     isFocal=false;
     isOcculaire=false;
-    isImage=false;
+    isPb=false;
+    isMiroir=false;
     isFin=false;
 }
 
@@ -50,7 +51,7 @@ function draw() {
     stroke('lightblue');
     arc(objectif.x, objectif.y,   50, 200, -HALF_PI + 0.3, HALF_PI - 0.3);
     arc(objectif.x+1, objectif.y,   50, 200, -HALF_PI + 0.3, HALF_PI - 0.3);
-
+    
     if (mouseIsPressed && !isStop) {
         if (isFin) {
             /*$("#image").hide();
@@ -59,13 +60,6 @@ function draw() {
             canvasAstro.remove();
             setup();*/
             isStop=true;
-        }
-        
-        if(isOcculaire) {
-            //draw occulaire
-            noFill();
-            stroke("lightblue");
-            line(130,80,175,125);
         }
 
         // move ellipse
@@ -85,9 +79,10 @@ function draw() {
             if(!isObjectif) {
                 isObjectif=true;
                 isStop=true;
+                $("#objectif").empty();
                 $("#objectif").append("\
                 <div class='alert alert-info alert-dismissible' role='alert'>\
-                    <div>Les rayons lumineux se refl&egrave;tent sur un mirroir faisant office d'objectif.</div>\
+                    <div>Les rayons lumineux se refl&egrave;tent sur un miroir faisant office d'objectif.</div>\
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
                 </div>");
                 $("#objectif").show(500);
@@ -95,16 +90,17 @@ function draw() {
         }
 
         if(position3.x<200) {
-            if(!isOcculaire) {
-                isOcculaire=true;
+            if(!isPb) {
+                isPb=true;
                 isStop=true;
                 $("#objectif").hide(1000);
-                $("#occulaire").append("\
+                $("#pb").empty();
+                $("#pb").append("\
                 <div class='alert alert-info alert-dismissible' role='alert'>\
-                    <div>Probl&egrave;me: comment faire pour &eacute;viter que la t&ecirc;te n'occulte les rayons lumineux?</div>\
+                    <div>Probl&egrave;me: comment faire pour &eacute;viter que la t&ecirc;te, lors d'une observation, n'occulte les rayons lumineux?</div>\
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
                 </div>");
-                $("#objecocculairetif").show(500);
+                $("#pb").show(500);
             }
         }
 
@@ -114,7 +110,7 @@ function draw() {
             fill('orange');
             noStroke();
             ellipse(position5.x, position5.y, 1, 1);
-            position5.add(0.25, -1);
+            position5.add(0.25, -0.8);
         }
 
         if(position3.x<170) {
@@ -122,9 +118,50 @@ function draw() {
             fill('orange');
             noStroke();
             ellipse(position6.x, position6.y, 1, 1);
-            position6.add(-0.25, -1);
+            position6.add(-0.25, -0.8);
+
+            if(!isMiroir) {    
+                isMiroir=true;
+                isStop=true;
+                noFill();
+                stroke("lightblue");
+                line(130,80,175,125)
+
+                $("#pb").hide(1000);
+                $("#miroir").empty();
+                $("#miroir").append("\
+                <div class='alert alert-info alert-dismissible' role='alert'>\
+                    <div>On utilise un second miroir, mais cette fois-ci plan, pour d&eacute;vier la lumi&egrave;re sur le c&ocirc;t&eacute;!<div>\
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
+                </div>");
+                $("#miroir").show(500);
+            }
         }
 
+        if (position5.x>166) {
+            //draw occuliare
+            fill('lightblue');
+            stroke('lightblue');
+            ellipse(occulaire.x, occulaire.y,   50, 7);
+
+            // draw focal
+            noFill();
+            stroke("black");
+            line(149,40,149,60);
+
+            $("#focal").show();
+
+            $("#miroir").hide(1000);
+            $("#occulaire").empty();
+            $("#occulaire").append("\
+            <div class='alert alert-info alert-dismissible' role='alert'>\
+                <div>On retrouve un occulaire en sortie du t&eacute;lescope. Le calcul du grossissement est identique &agrave; la lunette. \
+                C'est le rapport des focales entre l'objectif et de l'occulaire.<div>\
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
+            </div>");
+            $("#occulaire").show(500);
+    }
+        
         /*if (position.x>width) {
             position.add(-1, 0.4);
             position2.add(-1, -0.4);
@@ -140,17 +177,23 @@ function draw() {
   
     if (!mouseIsPressed) {
         isStop=false;
-        if (isObjectif && isFocal && isOcculaire && isImage) {
+        if (isObjectif && isFocal && isOcculaire && isPb && isMiroir) {
             isFin=true;
         }
     }
-  //print('x: '+position.x+", y1: "+position.y+", y2: "+position2.y);
+    //print('x: '+position5.x+", y: "+position5.y);
 }
 
 function keyPressed() {
     // key = r
     if (keyCode === 82)  {
         canvasAstro.remove();
+        $("#objectif").empty();
+        $("#pb").empty();
+        $("#miroir").empty();
+        $("#occulaire").empty();
+        $("#focal").hide();
+       
         setup();
     }
 }
