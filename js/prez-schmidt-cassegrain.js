@@ -27,7 +27,7 @@ class SchmidtCassegrain {
             <span>\
                 Dans la course au grossissement la lentille présente le désavantage d'être limitée par la taille et donc le poids. \
                 <p class='fragment fade-in'>En effet un fort grosssissement ne sert à rien si le diamètre de l'objectif reste limité.</p>\
-                <p class='fragment fade-in'>Avec l'utilisation par Newton d'un mirroir, on a pu augmenter le diamètre de l'objectif. et donc utiliser un grossissment plus important.</p>\
+                <p class='fragment fade-in'>Avec l'utilisation par Newton d'un miroir, on a pu augmenter le diamètre de l'objectif. et donc utiliser un grossissment plus important.</p>\
                 <p class='fragment fade-in' style='display: flex; justify-content: center;'>\
                     <img src='img/newton.jpg' class='rounded' width=350px'>\
                     <br>\

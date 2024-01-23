@@ -23,15 +23,25 @@ class Cassegrain {
         );
 
         $(this.class).append("\
-        <section class='newton-intro'>\
+        <section class='cassegrain-intro'>\
             <span>\
-                Dans la course au grossissement la lentille présente le désavantage d'être limitée par la taille et donc le poids. \
-                <p class='fragment fade-in'>En effet un fort grosssissement ne sert à rien si le diamètre de l'objectif reste limité.</p>\
-                <p class='fragment fade-in'>Avec l'utilisation par Newton d'un mirroir, on a pu augmenter le diamètre de l'objectif. et donc utiliser un grossissment plus important.</p>\
-                <p class='fragment fade-in' style='display: flex; justify-content: center;'>\
-                    <img src='img/newton.jpg' class='rounded' width=350px'>\
-                    <br>\
-                    <span class='newton-figure'>Réplique du télescope de Newton</span>\
+                A peu près au même moment que le télescope de Newton est apparu le télescope de Cassegrain. \
+                <p class='fragment fade-in'>On utilise aussi deux miroirs, mais cette fois-ci disposés sur le même axe.</p>\
+                <p class='fragment fade-in'>L'image est renvoyée par le miroir primaire concave puis par le miroir secondaire convexe.</p>\
+                <p class='fragment fade-in-then-out' style='display: flex; justify-content: center;'>\
+                    <img src='img/cassegrain1.jpg' class='rounded img-cassegrain''>\
+                    <span class='text-cassegrain'>Le télescope est de longueur réduite</span>\
+                    <span class='cassegrain-figure'>Télescope Cassegrain C 203/2436</span>\
+                </p>\
+                <p class='fragment fade-in-then-out' style='display: flex; justify-content: center;'>\
+                    <img src='img/cassegrain2.jpg' class='rounded img-cassegrain''>\
+                    <span class='text-cassegrain'>Le télescope est de longueur réduite</span>\
+                    <span class='cassegrain-figure'>Télescope Cassegrain C 203/2436</span>\
+                </p>\
+                <p class='fragment fade-in-then-out' style='display: flex; justify-content: center;'>\
+                    <img src='img/cassegrain3.jpg' class='rounded img-cassegrain''>\
+                    <span class='text-cassegrain'>Le télescope est de longueur réduite</span>\
+                    <span class='cassegrain-figure'>Télescope Cassegrain C 203/2436</span>\
                 </p>\
             </span>\
         </section>"
