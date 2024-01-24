@@ -73,13 +73,19 @@ class Oeil {
             </svg>\
             <p style='font-size: 12px; position: relative; bottom: 20px;'>*Cliquer sur le schéma!</p>\
             <p class='fragment fade-in oeil-tech' style='top: 115px;'>\
-                <span>A partir de cette étude, l'astronome utilise deux techniques pour optimiser son observation:</<span>\
+                <span>L'astronome utilise deux techniques pour optimiser son observation:</<span>\
             </p>\
             <p class='fragment fade-in oeil-tech' style='top: 215px;'>\
-                <span>1 - il se met dans l'obscurité</<span>\
+                <span>1- il se met dans l'obscurité</<span>\
             </p>\
-            <p class='fragment fade-in oeil-tech' style='top: 275px;'>\
+            <p class='fragment fade-in oeil-tech' style='top: 265px;'>\
+                <span>-> cela permet d'augmenter la taille de la pupille pour capter plus de lumière</<span>\
+            </p>\
+            <p class='fragment fade-in oeil-tech' style='top: 350px;'>\
                 <span>2 - il regarde une zone obscure légèrement à coté de l'objet visé</<span>\
+            </p>\
+            <p class='fragment fade-in oeil-tech' style='top: 425px;'>\
+            <span>-> cela permet de nouveau d'augmenter la taille de la pupille pour mieux observer l'objet visé</<span>\
             </p>\
         </section>"
         );

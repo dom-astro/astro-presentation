@@ -27,13 +27,13 @@ class Lunette {
             <span>\
                 Les télescopes réfracteurs sont les plus anciens types de télescopes. Ils utilisent des lentilles pour focaliser \
                 la lumière. On peut les séparer en deux catégories:\
-                <p class='fragment fade-in lunette-astro'>\
-                    <br><span>La lunette astronomique</span><br>\
-                    <img src='img/lunette-astro.jpg' class='rounded'>\
-                </p>\
                 <p class='fragment fade-in-then-out lunette-galilee'>\
                     <span>La lunette de Galilée</span><br>\
                     <img src='img/lunette-galilee.jpg' class='rounded'>\
+                </p>\
+                <p class='fragment fade-in lunette-astro'>\
+                    <br><span>La lunette de Kepler</span><br>\
+                    <img src='img/lunette-astro.jpg' class='rounded'>\
                 </p>\
             </span>\
         </section>"
