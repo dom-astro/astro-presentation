@@ -5,7 +5,7 @@ var isStop, isObjectif, isFocal, isOcculaire, isFin, isImage;
 
 function setup() {
     // Création du canvas
-    canvasAstro=createCanvas(400, 250);
+    canvasAstro=createCanvas(400, 200);
 
     //start ellipse at middle top of screen
     position = createVector(0, 50);
