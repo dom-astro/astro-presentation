@@ -15,7 +15,7 @@ class Lunette3 {
             <div class='card border-dark mb-100'>\
                 <div class='card-header'><h2 class='card-title'>Partie II</h2></div>\
                 <div class='card-body text-dark'>\
-                    <h3 class='card-title'>2) La lunette de Galilée</h3>\
+                    <h3 class='card-title'>1) La lunette de Galilée</h3>\
                 </div>\
             </div>\
         </section>"
@@ -26,7 +26,7 @@ class Lunette3 {
     galilee() {
         $(this.class).append("\
             <section class='trajet-astro'>\
-                <span>La lunette de galilée est aussi constituée de deux lentilles. Cependant la seconde est une lentille divergente.</span>\
+                <span>La lunette de galilée est aussi constituée de deux lentilles. La première est convergente tandis que la seconde est divergente.</span>\
                 <br>\
                 <iframe id='galilee-iframe' src='galilee.html' title='Trajet de la lumière dans une lunette astronomique'></iframe>\
                 <svg id='galilee-zoom' style='position: absolute; left: -25px; top: 130px;' width='16' height='16' fill='currentColor' class='bi bi-fullscreen' viewBox='0 0 16 16'>\

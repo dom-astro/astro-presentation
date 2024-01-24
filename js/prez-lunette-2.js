@@ -8,41 +8,6 @@ class Lunette2 {
         this.write();
     }
     
-    /* Introduction */
-    intro() {
-        $(this.class).append("\
-        <section style='text-align: center;'>\
-            <div class='card border-dark mb-100'>\
-                <div class='card-header'><h2 class='card-title'>Partie II</h2></div>\
-                <div class='card-body text-dark'>\
-                    <h3 class='card-title'>Télescopes réfracteurs</h3>\
-                    <p class='card-text'>Les lunettes</p>\
-                </div>\
-            </div>\
-        </section>"
-        );
-
-        $(this.class).append("\
-        <section class='lunette-intro'>\
-            <span>\
-                Les télescopes réfracteurs sont les plus anciens types de télescopes. Ils utilisent des lentilles pour focaliser \
-                la lumière. On peut les séparer en deux catégories:\
-                <p class='fragment fade-in lunette-astro'>\
-                    <br><span>La lunette astronomique</span><br>\
-                    <img src='img/lunette-astro.jpg' class='rounded'>\
-                </p>\
-                <p class='fragment fade-in-then-out lunette-galilee'>\
-                    <span>La lunette de Galilée</span><br>\
-                    <img src='img/lunette-galilee.jpg' class='rounded'>\
-                </p>\
-            </span>\
-        </section>"
-        );
-
-        $(this.class).append("\
-        ");
-    }
-
     /* Lunette astronomique */
     introAstro() {
         $(this.class).append("\
@@ -50,7 +15,7 @@ class Lunette2 {
             <div class='card border-dark mb-100'>\
                 <div class='card-header'><h2 class='card-title'>Partie II</h2></div>\
                 <div class='card-body text-dark'>\
-                    <h3 class='card-title'>1) La lunette astronomique</h3>\
+                    <h3 class='card-title'>2) La lunette de Kepler</h3>\
                 </div>\
             </div>\
         </section>"
@@ -60,7 +25,7 @@ class Lunette2 {
     astro() {
         $(this.class).append("\
         <section class='astro'>\
-            <span>Une lunette astronomique est constituée de deux lentilles<br><br>\
+            <span>La lunette a de Kepler ou lunette astronomique est constituée de deux lentilles:<br><br>\
                 <p class='fragment fade-in-then-out'>\
                     <span>- Une première lentille en entrée de l'instrument (l'objectif), qui capte la lumière.</span><br><br>\
                     <span></span><br><br>\

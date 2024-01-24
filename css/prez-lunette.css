@@ -32,24 +32,24 @@
     transform: scale(2);
 }*/
 
-.lunette-astro {
+.lunette-galilee {
     position: absolute;
-    top: 100px;
+    top: 150px;
     left: 100px;
 }
 
-.lunette-astro>img {
+.lunette-galilee>img {
     width: 500px;
     height: 300px;
 }
 
-.lunette-galilee {
+.lunette-astro {
     position: absolute;
     top: 150px;
     left: 650px;
 }
 
-.lunette-galilee>img {
+.lunette-astro>img {
     width: 500px;
     height: 300px;
 }
@@ -97,4 +97,10 @@
     border-radius: 8px;
     overflow: hidden;
     transform: scale(1);
+}
+
+.lunette-intro>span>p>span {
+    font-size: 30px;
+    position: relative;
+    top: 15px;
 }
