@@ -10,12 +10,12 @@
 .cassegrain-trajet>p>svg {
     position: absolute;
     left: -25px;
-    top: 155px;
+    top: 128px;
 }
 
 .cassegrain-trajet>p>span {
     position: relative;
-    top: -25px;
+    top: -50px;
 }
 
 .cassegrain-figure {
@@ -38,10 +38,10 @@
 
 #cassegrain-iframe {
     height: 285px;
-    width: 500px;
+    width: 550px;
     position: relative;
     left: 0px;
-    top: -25px;
+    top: -50px;
     border-radius: 8px;
     overflow: hidden;
     transform: scale(1);

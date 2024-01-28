@@ -11,7 +11,7 @@ class Lunette2 {
     /* Lunette astronomique */
     introAstro() {
         $(this.class).append("\
-        <section style='text-align: center;'>\
+        <section class='chapitre'>\
             <div class='card border-dark mb-100'>\
                 <div class='card-header'><h2 class='card-title'>Partie II</h2></div>\
                 <div class='card-body text-dark'>\

@@ -11,7 +11,7 @@ class Cassegrain {
     /* Introduction */
     intro() {
         $(this.class).append("\
-        <section style='text-align: center;'>\
+        <section class='chapitre'>\
             <div class='card border-dark mb-100'>\
                 <div class='card-header'><h2 class='card-title'>Partie III</h2></div>\
                 <div class='card-body text-dark'>\
@@ -58,13 +58,13 @@ class Cassegrain {
             let scale=$("#cassegrain-iframe").css("transform");
 
             if(scale=="matrix(1, 0, 0, 1, 0, 0)") {
-                $("#cassegrain-iframe").css("transform", "scale(2)");
-                $("#cassegrain-iframe").css("left", "250px");
-                $("#cassegrain-iframe").css("top", "150px");
+                $("#cassegrain-iframe").css("transform", "scale(1.5)");
+                $("#cassegrain-iframe").css("left", "140px");
+                $("#cassegrain-iframe").css("top", "25px");
             } else {
                 $("#cassegrain-iframe").css("transform", "scale(1)");
                 $("#cassegrain-iframe").css("left", "0px");
-                $("#cassegrain-iframe").css("top", "0px");
+                $("#cassegrain-iframe").css("top", "-50px");
             }
         });
     }

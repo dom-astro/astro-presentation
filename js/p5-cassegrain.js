@@ -93,25 +93,6 @@ function draw() {
             }
         }
 
-        if(position3.x<200) {
-            if(!isPb) {
-                isPb=true;
-                isStop=true;
-                $("#objectif").hide(1000);
-                $("#pb").empty();
-                $("#pb").append("\
-                <div class='alert alert-info alert-dismissible' role='alert'>\
-                    <div>Probl&egrave;me: comment faire pour &eacute;viter que la t&ecirc;te, lors d'une observation, n'occulte les rayons lumineux?</div>\
-                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
-                </div>");
-                $("#pb").show(500);
-            }
-        }
-
-
-        if(position3.x<=136) {
-        }
-
         if(position3.x<150) {
             position3.add(1,-0.2);
             fill('orange');
@@ -132,15 +113,15 @@ function draw() {
                 // Miroir
                 noFill();
                 stroke("lightblue");
-                arc(miroir.x-1, miroir.y,   50, 200, -HALF_PI + 0.8, HALF_PI - 0.8);
-                arc(miroir.x, miroir.y,   50, 200, -HALF_PI + 0.8, HALF_PI - 0.8);
+                arc(miroir.x-1, miroir.y, 50, 200, -HALF_PI + 0.8, HALF_PI - 0.8);
+                arc(miroir.x, miroir.y, 50, 200, -HALF_PI + 0.8, HALF_PI - 0.8);
                 //arc(objectif.x+1, objectif.y,   50, 200, -HALF_PI + 0.2, -HALF_PI + 0.8);
                 //arc(objectif.x+1, objectif.y, 50, 200, -HALF_PI + 0.3, -HALF_PI);
                 //arc(objectif.x, objectif.y,   50, 200,  HALF_PI - 0.8, HALF_PI - 0.2);
                 //arc(objectif.x+1, objectif.y,   50, 200,  HALF_PI - 0.8, HALF_PI - 0.2);
             
 
-                $("#pb").hide(1000);
+                $("#objectif").hide(1000);
                 $("#miroir").empty();
                 $("#miroir").append("\
                 <div class='alert alert-info alert-dismissible' role='alert'>\
@@ -153,23 +134,22 @@ function draw() {
 
         if (position5.x>166) {
             //draw occuliare
-            fill('lightblue');
-            stroke('lightblue');
-            ellipse(occulaire.x, occulaire.y,   50, 7);
+            //fill('lightblue');
+            //stroke('lightblue');
+            //ellipse(occulaire.x, occulaire.y,   50, 7);
 
             // draw focal
-            noFill();
-            stroke("black");
-            line(149,40,149,60);
+            //noFill();
+            //stroke("black");
+            //line(149,40,149,60);
 
-            $("#focal").show();
+            //$("#focal").show();
 
             $("#miroir").hide(1000);
             $("#occulaire").empty();
             $("#occulaire").append("\
             <div class='alert alert-info alert-dismissible' role='alert'>\
                 <div>On retrouve un occulaire en sortie du t&eacute;lescope. Le calcul du grossissement est identique &agrave; la lunette. \
-                C'est le rapport des focales entre l'objectif et de l'occulaire.<div>\
                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
             </div>");
             $("#occulaire").show(500);
@@ -205,7 +185,7 @@ function keyPressed() {
         $("#pb").empty();
         $("#miroir").empty();
         $("#occulaire").empty();
-        $("#focal").hide();
+        //$("#focal").hide();
        
         setup();
     }
