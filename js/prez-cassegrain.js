@@ -29,8 +29,6 @@ class Cassegrain {
                 <p class='fragment fade-in'>On utilise aussi deux miroirs, mais cette fois-ci disposés sur le même axe.</p>\
                 <p class='fragment fade-in-' style='display: flex; justify-content: center;'>\
                     <img src='img/cassegrain1.jpg' class='rounded img-cassegrain''>\
-                    <img src='img/cassegrain2.jpg' class='rounded img-cassegrain''>\
-                    <img src='img/cassegrain3.jpg' class='rounded img-cassegrain''>\
                     <span class='cassegrain-figure'>Télescope Cassegrain C 203/2436</span>\
                 </p>\
             </span>\
