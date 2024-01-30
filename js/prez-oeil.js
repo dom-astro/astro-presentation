@@ -105,8 +105,27 @@ class Oeil {
         });
     }
 
+    observation() {
+        $(this.class).append("\
+        <section class='obs-oeil'>\
+            <p>Voici ce que nous pouvons observer à l'oeil nu</p>\
+            <p class='fragment fade-in obs-etoiles'>\
+                <span>Les étoiles, les planètes, la lune, le soleil. <br>On peut remarquer que Vénus et la lune sont proches du soleil. Savez-vous pourquoi?</span><br>\
+                <br>\
+                <img src='img/obs-oeil.png' class='rounded'>\
+            </p>\
+            <p class='fragment fade-in obs-vl'>\
+                <span>La voie lactée quand les conditions de visibilités sont réunies</span><br>\
+                <br>\
+                <img src='img/All Sky.jpg' class='rounded'>\
+            </p>\
+            </section>"
+        );
+    }
+
     write() {
         this.intro();
         this.trajet();
+        this.observation();
     }
 }

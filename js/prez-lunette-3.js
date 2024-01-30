@@ -26,7 +26,7 @@ class Lunette3 {
     galilee() {
         $(this.class).append("\
             <section class='trajet-astro'>\
-                <span>La lunette de galilée est aussi constituée de deux lentilles. La première est convergente tandis que la seconde est divergente.</span>\
+                <span>En 1609, Galilée construisit une lunette constituée de deux lentilles.<br>La première est convergente tandis que la seconde est divergente.</span>\
                 <br>\
                 <iframe id='galilee-iframe' src='galilee.html' title='Trajet de la lumière dans une lunette astronomique'></iframe>\
                 <svg id='galilee-zoom' style='position: absolute; left: -25px; top: 130px;' width='16' height='16' fill='currentColor' class='bi bi-fullscreen' viewBox='0 0 16 16'>\
@@ -52,12 +52,30 @@ class Lunette3 {
                 $("#galilee-iframe").css("top", "25px");
             }
         });
+    }
 
+    observation() {
+        $(this.class).append("\
+        <section class='obs-galilee'>\
+            <p>Voici ce que Galilée a dessiné d'après ses observations au début de l'année 1610</p>\
+            <p class='fragment fade-in obs-lune'>\
+                <span>Dessin de la lune</span><br>\
+                <br>\
+                <img src='img/galilee-lune.jpg' class='rounded'>\
+            </p>\
+            <p class='fragment fade-in obs-jupiter'>\
+                <span>Ballet des satellites de Jupiter</span><br>\
+                <br>\
+                <img src='img/galilee-jupiter.png' class='rounded'>\
+            </p>\
+            </section>"
+        );
     }
 
 
     write() {
         this.introGalilee();
         this.galilee();
+        this.observation();
     }
 }

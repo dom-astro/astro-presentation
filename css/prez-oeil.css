@@ -72,3 +72,30 @@
     font-size: 28px;
     left: 550px;
 }
+
+.obs-oeil>p>span {
+    font-size: 22px;
+    position: absolute;
+}
+
+.obs-etoiles {
+    position: absolute;
+    top: 150px;
+    left: 100px;
+}
+
+.obs-etoiles>img {
+    width: 500px;
+    height: 300px;
+}
+
+.obs-vl {
+    position: absolute;
+    top: 150px;
+    left: 650px;
+}
+
+.obs-vl>img {
+    width: 500px;
+    height: 300px;
+}

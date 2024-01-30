@@ -34,7 +34,7 @@ class Lunette {
                 </p>\
                 <p class='fragment fade-in lunette-astro'>\
                     <span>La lunette de Kepler</span><br>\
-                    <img src='img/lunette-astro.jpg' class='rounded'>\
+                    <img src='img/lunette-kepler-tintin.png' class='rounded'>\
                 </p>\
             </span>\
         </section>"
