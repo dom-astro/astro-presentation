@@ -97,7 +97,7 @@ class Lunette2 {
         <section class='obs-kepler'>\
             <p>Faisons une simulation avec une lunette de 60mm et de focal 300mm.</p>\
             <p class='fragment fade-in'>La simulation porte sur la Lune, Saturne et les Pléiades.</p>\
-            <p class='fragment fade-in'>Avec une gamme d'occulaire allant de 30mm à 4mm, soit un grossissement de 10 à 75 fois.</p>\
+            <p class='fragment fade-in'>Avec une gamme d'occulaire dont la focale vont de 30mm à 4mm, soit un grossissement de ...</p>\
             <p class='fragment fade-in'>\
                 <a target='_blank' href='https://www.stelvision.com/astro/simulateur-de-telescope/?simtelmode=visu&D=60&F=300&FD=5&type_choix=auto&nboc=5&champ_nom=50&champ_alt=&cibles=lune%2Csaturne%2Cpleiades&simu_personnalisee=Simuler'>\
                 <svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='currentColor' class='bi bi-moon-stars' viewBox='0 0 16 16'>\
