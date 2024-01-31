@@ -24,15 +24,18 @@ class Telescope {
         $(this.class).append("\
         <section class='telescope-intro'>\
             <span>\
-                Dans la course au grossissement la lentille présente le désavantage d'être limitée par la taille et donc le poids. \
+                Dans la course au grossissement la lentille présente le désavantage d'être limitée par le poids et donc la taille. \
                 <p class='fragment fade-in'>En effet un fort grosssissement ne sert à rien si le diamètre de l'objectif reste limité.</p>\
-                <p class='fragment fade-in'>Avec l'utilisation d'un miroir, on a pu augmenter le diamètre de l'objectif ...</p>\
-                <p class='fragment fade-in'>tout en réduissant la masse de celui-ci ...</p>\
-                <p class='fragment fade-in'>et donc utiliser un grossissement plus important!</p>\
-                <p class='fragment fade-in' style='display: flex; justify-content: center;'>\
-                    <img src='img/newton.jpg' class='rounded' width=350px'>\
+                <p class='fragment fade-in'>C'est comme zoomer une image avec peu de pixel. On obtient des pixels plus gros!</p>\
+                <p class='fragment fade-in telescope-saturne'>\
+                    <img src='img/saturne.jpg' class='rounded' width=250px'>\
                     <br>\
-                    <span class='newton-figure'>Réplique du télescope de Newton</span>\
+                    <span class='newton-figure'>Saturne depuis une lunette de 60mm</span>\
+                </p>\
+                <p class='fragment fade-in telescope-saturne-zoom'>\
+                    <img src='img/saturne-zoom.png' class='rounded' width=250px'>\
+                    <br>\
+                    <span class='newton-figure'>Zoom x5 de l'image Saturne</span>\
                 </p>\
             </span>\
         </section>"

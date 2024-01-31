@@ -5,6 +5,7 @@
 .telescope-intro {
     text-align: left;
     font-size: 30px;
+    top: 80px !important;
 }
 
 .telescope-figure {
@@ -12,4 +13,24 @@
     font-size: 16px;
     position: absolute;
     bottom: 0px;
+}
+
+.telescope-saturne {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+
+.telescope-saturne>img {
+    width: 250px;
+}
+
+.telescope-saturne-zoom {
+    position: absolute;
+    top: 200px;
+    left: 650px;
+}
+
+.telescope-saturne-zoom>img {
+    width: 250px;
 }
