@@ -9,7 +9,7 @@ function initPrez() {
     const newton = new Newton();
     const cassegrain = new Cassegrain();
     const schmidtCassegrain = new SchmidtCassegrain();
-
+    const question = new Question();
     Reveal.initialize({
         hash: true,
         width: 1300,
