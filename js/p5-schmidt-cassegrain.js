@@ -124,7 +124,7 @@ function draw() {
                 $("#objectif").empty();
                 $("#objectif").append("\
                 <div class='alert alert-info alert-dismissible' role='alert'>\
-                    <div>Les rayons lumineux se refl&egrave;tent sur un miroir faisant office d'objectif.</div>\
+                    <div>Les rayons lumineux se refl&egrave;tent sur le miroir primaire.</div>\
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
                 </div>");
                 $("#objectif").show(500);
@@ -161,14 +161,14 @@ function draw() {
                 $("#miroir").empty();
                 $("#miroir").append("\
                 <div class='alert alert-info alert-dismissible' role='alert'>\
-                    <div>On utilise un second miroir, mais cette fois-ci plan, pour d&eacute;vier la lumi&egrave;re sur le c&ocirc;t&eacute;!<div>\
+                    <div>On utilise un second miroir convexe pour renvoyer la lumi&egrave;re vers le miroire primaire.<div>\
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
                 </div>");
                 $("#miroir").show(500);
             }
         }
 
-        if (position5.x>166) {
+        if (position5.x>350) {
             //draw occuliare
             //fill('lightblue');
             //stroke('lightblue');

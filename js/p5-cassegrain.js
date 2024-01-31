@@ -125,7 +125,7 @@ function draw() {
                 $("#miroir").empty();
                 $("#miroir").append("\
                 <div class='alert alert-info alert-dismissible' role='alert'>\
-                    <div>On utilise un second miroir, mais cette fois-ci plan, pour d&eacute;vier la lumi&egrave;re sur le c&ocirc;t&eacute;!<div>\
+                    <div>On utilise un second miroir convexe pour renvoyer vers l'orifice du miroir primaire.</div>\
                     <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>\
                 </div>");
                 $("#miroir").show(500);

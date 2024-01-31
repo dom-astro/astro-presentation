@@ -25,8 +25,9 @@ class Cassegrain {
         $(this.class).append("\
         <section class='cassegrain-intro'>\
             <span>\
-                A peu près au même moment que le télescope de cassegrain est apparu le télescope de Cassegrain. \
+                A peu près au même moment que le télescope de Newton est apparu le télescope de Cassegrain. \
                 <p class='fragment fade-in'>On utilise aussi deux miroirs, mais cette fois-ci disposés sur le même axe.</p>\
+                <p class='fragment fade-in'>Cela a pour effet de pour allonger la distance focale, donc le grossissement du télescope pour une taille plus réduite.</p>\
                 <p class='fragment fade-in-' style='display: flex; justify-content: center;'>\
                     <img src='img/cassegrain1.jpg' class='rounded img-cassegrain''>\
                     <span class='cassegrain-figure'>Télescope Cassegrain C 203/2436</span>\
@@ -39,8 +40,8 @@ class Cassegrain {
     schema() {
         $(this.class).append("\
             <section class='cassegrain-trajet'>\
-                <span>Le télescope de Cassegrain utilise un miroir concave pour faire converger la lumière.</span>\
-                <p class='fragment fade-in'>A ce miroir est ajouté un miroir convexe pour renvoyer la lumière vers l'occulaire.</p>\
+                <span>Le télescope de Cassegrain utilise donc un miroir concave pour faire converger la lumière.</span>\
+                <p class='fragment fade-in'>Et un miroir convexe pour renvoyer la lumière vers l'occulaire.</p>\
                 <br>\
                 <p class='fragment fade-in'>\
                     <iframe id='cassegrain-iframe' src='cassegrain.html' title='Trajet de la lumière dans  télescope de type cassegrain'></iframe>\
