@@ -45,3 +45,39 @@
     overflow: hidden;
     transform: scale(1);
 }
+
+#focalisation-iframe {
+    height: 285px;
+    width: 300px;
+    position: absolute;
+    left: 100px;
+    top: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    transform: scale(1);
+    max-height: unset !important;
+}
+
+#focalisation-concave-iframe {
+    height: 285px;
+    width: 300px;
+    position: absolute;
+    left: 500px;
+    top: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    transform: scale(1);
+    max-height: unset !important;
+}
+
+#focalisation-schmidt-iframe {
+    height: 285px;
+    width: 300px;
+    position: absolute;
+    left: 900px;
+    top: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    transform: scale(1);
+    max-height: unset !important;
+}

@@ -26,7 +26,7 @@ class SchmidtCassegrain {
         <section class='schmidt-cassegrain-intro'>\
             <span>\
                 Dans les années 1970, on associe au téléscope Cassegrain une lame de Schmidt. Cela a fortement contribué à son succés au près des astronomes amateurs.\
-                <p class='fragment fade-in'>En effet, grâce à la lame de schmidt, on a pu remplacer le miroir parabolique par un miroir sphérique, plus facile et moins cher à fabriquer.</p>\
+                <p class='fragment fade-in'>En effet, grâce à la lame de Schmidt, on a pu remplacer le miroir parabolique par un miroir sphérique, plus facile et moins cher à fabriquer.</p>\
                 <p class='fragment fade-in-' style='display: flex; justify-content: center;'>\
                     <img src='img/schmidt-cassegrain.jpg' class='rounded img-schmidt-cassegrain'>\
                     <span class='schmidt-cassegrain-figure'>Télescope Schmidt-Cassegrain SC 203 / 2032 C8 OTA</span>\
@@ -66,8 +66,46 @@ class SchmidtCassegrain {
         });
     }
 
+    focalisation() {
+        $(this.class).append("\
+            <section class='schmidt-cassegrain-trajet'>\
+                <span>La lame de Schmidt permet l’utilisation d’un miroir sphérique qui est bien plus facile à fabriquer. En effet, un\
+                miroir sphérique ne permet pas de bien focaliser la lumière, au contraire d’un miroir parabolique, comme le\
+                montre les schémas ci-dessous:</span>\
+                <br>\
+                <p class='fragment fade-in'>\
+                    <iframe id='focalisation-iframe' src='focalisation.html' title='Trajet de la lumière dans télescope de type cassegrain'></iframe>\
+                    <span style='font-size: 12px; position: absolute; top: 450px; left: 100px;'>Miroir parabolique</span>\
+                </p>\
+                <p class='fragment fade-in'>\
+                    <iframe id='focalisation-concave-iframe' src='focalisation-concave.html' title='Trajet de la lumière dans télescope de type cassegrain'></iframe>\
+                    <span style='font-size: 12px; position: absolute; top: 450px; left: 500px;'>Miroir sphérique</span>\
+                </p>\
+                <p class='fragment fade-in'>\
+                    <iframe id='focalisation-schmidt-iframe' src='focalisation-schmidt.html' title='Trajet de la lumière dans télescope de type cassegrain'></iframe>\
+                    <span style='font-size: 12px; position: absolute; top: 450px; left: 900px;'>Lame de Schmidt + miroir sphérique</span>\
+                </p>\
+            </section>"
+        );
+
+        $("#schmidt-cassegrain-zoom").click(function() {
+            let scale=$("#schmidt-cassegrain-iframe").css("transform");
+
+            if(scale=="matrix(1, 0, 0, 1, 0, 0)") {
+                $("#schmidt-cassegrain-iframe").css("transform", "scale(1.5)");
+                $("#schmidt-cassegrain-iframe").css("left", "135px");
+                $("#schmidt-cassegrain-iframe").css("top", "70px");
+            } else {
+                $("#schmidt-cassegrain-iframe").css("transform", "scale(1)");
+                $("#schmidt-cassegrain-iframe").css("left", "0px");
+                $("#schmidt-cassegrain-iframe").css("top", "0px");
+            }
+        });
+    }
+
     write() {
         this.intro();
         this.schema();
+        this.focalisation();
     }
 }

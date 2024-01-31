@@ -25,7 +25,7 @@ class Newton {
         $(this.class).append("\
         <section class='newton-intro'>\
             <span>\
-                Pour résoudre ce problème, Newton remplace la lentille par un miroir concave.\
+                Pour résoudre ce problème de grossissement, Newton remplace la lentille par un miroir concave.\
                 <p class='fragment fade-in'>Il positionne ce miroir à l'arrière du télescope pour qu'il puisse refléter la lumière.</p>\
                 <p class='fragment fade-in'>L'avantage du miroir est qu'il peut avoir un diamètre plus grand pour un poid équivalent.</p>\
                 <p class='fragment fade-in-then-out' style='display: flex; position: absolute; top: 275px; left: 20%;'>\
